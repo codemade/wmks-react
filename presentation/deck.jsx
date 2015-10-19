@@ -13,10 +13,18 @@ const images = {
   city: require("./city.jpg"),
   kat: require("./kat.png"),
   react: require("./react.svg"),
+  codemade: require("./codemade.png"),
   chrkhl: require("./chrkhl.png"),
   revrng: require("./revrng.png"),
   twitter: require("./twitter.svg"),
   github: require("./github.svg")
+};
+
+const styles = {
+  codemade: {width: "60px", marginTop: "-20px", filter: "grayscale(1) invert(1) contrast(1)"},
+  avatar: { width: "200px", borderRadius: "100px", border: "6px double white" },
+  iconTwitter: {width: "40px", verticalAlign: "middle", marginRight: "20px"},
+  iconGithub: {width: "30px", verticalAlign: "middle"}
 };
 
 preloader([images.city, images.kat]);
@@ -24,13 +32,50 @@ preloader([images.city, images.kat]);
 export default class extends React.Component {
   render() {
     return (
-      <Deck transition={["zoom", "slide"]} transitionDuration={800}>
-        <Slide transition={["zoom"]} bgColor="primary">
-          <Heading size={2} textSize="12em" lineHeight={0.5} textColor="secondary">
+      <Deck transition={["slide"]} transitionDuration={800}>
+        <Slide transition={["slide"]} bgColor="black">
+          <Heading textSize="12em" lineHeight={0.1} textColor="#00D8FF" textFont="secondary">
             React JS
           </Heading>
           <Image src={images.react} height="300px"/>
-          <Text bold caps textColor="tertiary">Webmontag Kassel, 09. November 2015</Text>
+          <Text bold caps textColor="primary">
+            Webmontag Kassel, 09. November 2015
+          </Text>
+        </Slide>
+        <Slide transition={["slide"]} bgColor="black">
+          <Heading textSize="12em" lineHeight={0.1} textColor="#00D8FF" textFont="secondary">
+            codemade<Image src={images.codemade} style={styles.codemade} />
+          </Heading>
+          <Layout>
+            <Fill>
+              <Text textColor="primary">
+                <Image src={images.revrng} style={styles.avatar}/>
+                <br />
+                René Viering
+                <br />
+                <a href="https://twitter.com/rvrng">
+                  <Image src={images.twitter} style={styles.iconTwitter} />
+                </a>
+                <a href="https://github.com/revrng">
+                  <Image src={images.github} style={styles.iconGithub} />
+                </a>
+              </Text>
+            </Fill>
+            <Fill>
+              <Text textColor="primary">
+                <Image src={images.chrkhl} style={styles.avatar}/>
+                <br />
+                Christian Kühl
+                <br />
+                <a href="https://twitter.com/rvrng">
+                  <Image src={images.twitter} style={styles.iconTwitter} />
+                </a>
+                <a href="https://twitter.com/rvrng">
+                  <Image src={images.github} style={styles.iconGithub} />
+                </a>
+              </Text>
+            </Fill>
+          </Layout>
         </Slide>
         <Slide transition={["slide"]} bgColor="black" notes="You can even put notes on your slide. How awesome is that?">
           <Image src={images.kat.replace("/", "")} margin="0px auto 40px" height="293px"/>
