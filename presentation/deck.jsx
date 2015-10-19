@@ -32,23 +32,23 @@ preloader([images.city, images.kat]);
 export default class extends React.Component {
   render() {
     return (
-      <Deck transition={["slide"]} transitionDuration={800}>
-        <Slide transition={["slide"]} bgColor="black">
-          <Heading textSize="12em" lineHeight={0.1} textColor="#00D8FF" textFont="secondary">
+      <Deck transitionDuration={800}>
+        <Slide transition={["slide"]}>
+          <Heading textSize="12em" lineHeight={0.1} textColor="quartary" textFont="secondary">
             React JS
           </Heading>
           <Image src={images.react} height="300px"/>
-          <Text bold caps textColor="primary">
+          <Text bold caps textColor="secondary">
             Webmontag Kassel, 09. November 2015
           </Text>
         </Slide>
-        <Slide transition={["slide"]} bgColor="black">
-          <Heading textSize="12em" lineHeight={0.1} textColor="#00D8FF" textFont="secondary">
+        <Slide transition={["slide"]}>
+          <Heading textSize="12em" lineHeight={0.1} textColor="quartary" textFont="secondary">
             codemade<Image src={images.codemade} style={styles.codemade} />
           </Heading>
           <Layout>
             <Fill>
-              <Text textColor="primary">
+              <Text textColor="secondary">
                 <Image src={images.revrng} style={styles.avatar}/>
                 <br />
                 René Viering
@@ -62,7 +62,7 @@ export default class extends React.Component {
               </Text>
             </Fill>
             <Fill>
-              <Text textColor="primary">
+              <Text textColor="secondary">
                 <Image src={images.chrkhl} style={styles.avatar}/>
                 <br />
                 Christian Kühl
@@ -76,6 +76,51 @@ export default class extends React.Component {
               </Text>
             </Fill>
           </Layout>
+        </Slide>
+        <Slide transition={["slide"]}>
+          <Heading size={1} fit textColor="quartary" textFont="secondary">
+            What is React JS ?
+          </Heading>
+          <br />
+          <Appear>
+            <BlockQuote>
+              <Quote>
+                A JavaScript library for creating user interfaces
+              </Quote>
+            </BlockQuote>
+          </Appear>
+        </Slide>
+        <Slide bgColor="black">
+          <Heading size={1} fit textColor="#00D8FF" textFont="secondary">
+            Why React JS ?
+          </Heading>
+          <br />
+          <Appear>
+            <BlockQuote>
+              <Quote>
+                How to build applications with data, that changes over time?
+              </Quote>
+            </BlockQuote>
+          </Appear>
+        </Slide>
+        <Slide bgColor="black">
+          <Heading size={1} fit textColor="#00D8FF" textFont="secondary">
+            The root of all evil
+          </Heading>
+          <br />
+          <Appear>
+            <BlockQuote>
+              <Quote>
+                Data changing over time
+              </Quote>
+            </BlockQuote>
+          </Appear>
+        </Slide>
+        <Slide transition={["slide"]} bgColor="black" notes="You can even put notes on your slide. How awesome is that?">
+          <Image src={images.kat.replace("/", "")} margin="0px auto 40px" height="293px"/>
+          <Heading size={1} fit textColor="primary" textFont="secondary">
+            Wait what?
+          </Heading>
         </Slide>
         <Slide transition={["slide"]} bgColor="black" notes="You can even put notes on your slide. How awesome is that?">
           <Image src={images.kat.replace("/", "")} margin="0px auto 40px" height="293px"/>

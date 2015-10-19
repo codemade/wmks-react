@@ -1,8 +1,9 @@
 /*eslint-disable object-shorthand*/
 const colors = {
-  primary: "#f9c300",
-  secondary: "black",
-  tertiary: "white"
+  primary: "black",
+  secondary: "#f9c300",
+  tertiary: "white",
+  quartary: "#00D8FF"
 };
 
 const fonts = {
@@ -111,10 +112,10 @@ module.exports = {
       display: "inline-block"
     },
     quote: {
-      borderLeft: "1px solid " + colors.primary,
+      borderLeft: "1px solid " + colors.secondary,
       paddingLeft: 40,
       display: "block",
-      color: colors.primary,
+      color: colors.secondary,
       fontSize: "4.9em",
       lineHeight: 1,
       fontWeight: "bold"
