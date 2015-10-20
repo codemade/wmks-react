@@ -2,7 +2,7 @@
   "name": "wmks-react",
   "private": "true",
   "version": "1.0.0",
-  "description": "ReactJS Powered Presentation",
+  "description": "react presentation for wmks",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
