@@ -10,16 +10,15 @@ import preloader from "../src/utils/preloader";
 import Interactive from "./interactive";
 
 const images = {
-  city: require("./city.jpg"),
-  kat: require("./kat.png"),
-  react: require("./react.svg"),
-  codemade: require("./codemade.png"),
-  chrkhl: require("./chrkhl.png"),
-  revrng: require("./revrng.png"),
-  twitter: require("./twitter.svg"),
-  github: require("./github.svg"),
-  lego: require("./lego.svg"),
-  seriously: require("./seriously.png")
+  city: require("./img/city.jpg"),
+  react: require("./img/react.svg"),
+  codemade: require("./img/codemade.png"),
+  chrkhl: require("./img/chrkhl.png"),
+  revrng: require("./img/revrng.png"),
+  twitter: require("./img/twitter.svg"),
+  github: require("./img/github.svg"),
+  lego: require("./img/lego.svg"),
+  seriously: require("./img/seriously.png")
 };
 
 const styles = {
