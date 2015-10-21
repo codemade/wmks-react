@@ -10,7 +10,6 @@ import preloader from "../src/utils/preloader";
 import Interactive from "./interactive";
 
 const images = {
-  city: require("./img/city.jpg"),
   react: require("./img/react.svg"),
   codemade: require("./img/codemade.png"),
   chrkhl: require("./img/chrkhl.png"),
@@ -18,7 +17,8 @@ const images = {
   twitter: require("./img/twitter.svg"),
   github: require("./img/github.svg"),
   lego: require("./img/lego.svg"),
-  seriously: require("./img/seriously.png")
+  seriously: require("./img/seriously.png"),
+  reusable: require("./img/reusable.jpg")
 };
 
 const styles = {
@@ -223,6 +223,35 @@ export default class extends React.Component {
               </List>
             </Fill>
           </Layout>
+        </Slide>
+        <Slide>
+          <Heading size={1} fit textColor="quartary" textFont="secondary">
+            Composable ?
+          </Heading>
+          <Appear>
+            <Text fit textColor="secondary">
+              Means: You can compose them
+            </Text>
+          </Appear>
+          <Appear>
+            <CodePane
+              lang="javascript"
+              source={require("raw!./snippets/composable.example")}
+              margin="20px auto"/>
+          </Appear>
+        </Slide>
+        <Slide>
+          <Heading size={1} fit textColor="quartary" textFont="secondary">
+            Reusable ?
+          </Heading>
+          <Appear>
+            <Text fit textColor="secondary">
+              Means: You can reuse them
+            </Text>
+          </Appear>
+          <Appear>
+            <Image src={images.reusable} height="300px" />
+          </Appear>
         </Slide>
       </Deck>
     );

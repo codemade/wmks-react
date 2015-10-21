@@ -1,0 +1,12 @@
+var ArticleList = React.createClass({
+  render: function() {
+    return (
+      <div>
+        <h1>Articles</h1>
+        <ArticleFilter />
+        <ShoppingCart />
+        <ArticleList articles={this.props.articles} />
+      </div>
+    );
+  }
+});
