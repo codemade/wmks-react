@@ -17,7 +17,9 @@ const images = {
   chrkhl: require("./chrkhl.png"),
   revrng: require("./revrng.png"),
   twitter: require("./twitter.svg"),
-  github: require("./github.svg")
+  github: require("./github.svg"),
+  lego: require("./lego.svg"),
+  seriously: require("./seriously.png")
 };
 
 const styles = {
@@ -115,6 +117,113 @@ export default class extends React.Component {
               </Quote>
             </BlockQuote>
           </Appear>
+        </Slide>
+        <Slide bgColor="black">
+          <Heading size={1} fit textColor="quartary" textFont="secondary">
+            The Zen of React JS
+          </Heading>
+          <br />
+          <Appear>
+            <Heading size={2}>
+              #Everything
+            </Heading>
+          </Appear>
+        </Slide>
+        <Slide bgColor="black">
+          <Heading size={1} fit textColor="quartary" textFont="secondary">
+            The Zen of React JS
+          </Heading>
+          <br />
+          <Heading size={2}>
+            #is
+          </Heading>
+        </Slide>
+        <Slide bgColor="black">
+          <Heading size={1} fit textColor="quartary" textFont="secondary">
+            The Zen of React JS
+          </Heading>
+          <br />
+          <Heading size={2}>
+            #a
+          </Heading>
+        </Slide>
+        <Slide bgColor="black">
+          <Heading size={1} fit textColor="quartary" textFont="secondary">
+            The Zen of React JS
+          </Heading>
+          <br />
+          <Heading size={2}>
+            #component
+          </Heading>
+        </Slide>
+        <Slide bgColor="black">
+          <Heading size={1} fit textColor="quartary" textFont="secondary">
+            The Zen of React JS
+          </Heading>
+          <br />
+          <BlockQuote>
+            <Quote>
+              Break down the UI in components
+            </Quote>
+          </BlockQuote>
+        </Slide>
+        <Slide bgColor="black">
+          <Heading size={1} fit textColor="quartary" textFont="secondary">
+            Components are
+          </Heading>
+          <Layout>
+            <Fill>
+              <List>
+                <ListItem><Appear fid="1">composable</Appear></ListItem>
+                <ListItem><Appear fid="2">reusable</Appear></ListItem>
+                <ListItem><Appear fid="3">unit testable</Appear></ListItem>
+              </List>
+            </Fill>
+            <Fill>
+              <Appear>
+                <Image src={images.lego} height="300" />
+              </Appear>
+            </Fill>
+          </Layout>
+        </Slide>
+        <Slide>
+          <Heading size={1} fit textColor="quartary" textFont="secondary">
+            How does a component look like ?
+          </Heading>
+          <br />
+          <Appear>
+            <CodePane
+              lang="javascript"
+              source={require("raw!./simple-component.example")}
+              margin="20px auto"/>
+          </Appear>
+        </Slide>
+        <Slide>
+          <Heading size={1} fit textColor="quartary" textFont="secondary">
+            How does a component look like ?
+          </Heading>
+          <br />
+          <CodePane
+            lang="javascript"
+            source={require("raw!./simple-component-jsx.example")}
+            margin="20px auto"/>
+        </Slide>
+        <Slide>
+          <Heading size={1} textColor="quartary" textFont="secondary">
+            JSX
+          </Heading>
+          <Layout>
+            <Fill>
+              <Image src={images.seriously} />
+            </Fill>
+            <Fill>
+              <List>
+                <ListItem><Appear fid="1">optional XML-like syntax</Appear></ListItem>
+                <ListItem><Appear fid="2">it is not HTML</Appear></ListItem>
+                <ListItem><Appear fid="3">not a templating language</Appear></ListItem>
+              </List>
+            </Fill>
+          </Layout>
         </Slide>
       </Deck>
     );

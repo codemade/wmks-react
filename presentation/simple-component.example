@@ -1,0 +1,8 @@
+var HelloMessage = React.createClass({
+  render: function() {
+    return React.createElement("div", null, "Hello, World!");
+  }
+});
+
+var mountNode = document.getElementById('app-container');
+eactDOM.render(React.createElement("HelloMessage", null), mountNode);
