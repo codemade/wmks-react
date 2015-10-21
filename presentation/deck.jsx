@@ -193,7 +193,7 @@ export default class extends React.Component {
           <Appear>
             <CodePane
               lang="javascript"
-              source={require("raw!./simple-component.example")}
+              source={require("raw!./snippets/simple-component.example")}
               margin="20px auto"/>
           </Appear>
         </Slide>
@@ -204,7 +204,7 @@ export default class extends React.Component {
           <br />
           <CodePane
             lang="javascript"
-            source={require("raw!./simple-component-jsx.example")}
+            source={require("raw!./snippets/simple-component-jsx.example")}
             margin="20px auto"/>
         </Slide>
         <Slide>
