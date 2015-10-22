@@ -7,7 +7,9 @@ import {
 
 import preloader from "../src/utils/preloader";
 
-import Interactive from "./interactive";
+import MinionBill from "./components/minion-bill.react.js";
+import MinionJerry from "./components/minion-jerry.react.js";
+import MinionEvil from "./components/minion-evil.react.js";
 
 const images = {
   react: require("./img/react.svg"),
@@ -252,6 +254,11 @@ export default class extends React.Component {
           <Appear>
             <Image src={images.reusable} height="300px" />
           </Appear>
+        </Slide>
+        <Slide>
+          <MinionBill />
+          <MinionJerry />
+          <MinionEvil />
         </Slide>
       </Deck>
     );
