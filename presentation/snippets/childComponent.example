@@ -1,0 +1,9 @@
+var Son = React.createClass({
+  render: function() {
+    return (
+      <div>
+        <span>{this.props.message}</span>
+      </div>
+    );
+  }
+});

@@ -1,0 +1,9 @@
+var Son = React.createClass({
+	render() {
+		return <div style={styles}>
+			<div style={messageStyles}>
+				Thanks, i'll eat all ({this.props.miceCount})
+			</div>
+		</div>;
+	}
+});

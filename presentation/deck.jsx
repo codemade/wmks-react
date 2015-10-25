@@ -11,6 +11,8 @@ import MinionBill from "./components/minion-bill.react.js";
 import MinionJerry from "./components/minion-jerry.react.js";
 import MinionEvil from "./components/minion-evil.react.js";
 
+import Father from './components/catFather.react.js';
+
 const images = {
   react: require("./img/react.svg"),
   codemade: require("./img/codemade.png"),
@@ -26,7 +28,11 @@ const images = {
   superheroic: require("./img/superheroic.jpg"),
   magic: require("./img/magic.gif"),
   oneWay: require("./img/oneWay.jpg"),
-  parentToChild: require("./img/parentToChild.jpg")
+  parentToChild: require("./img/parentToChild.jpg"),
+  composable: require("./img/composable.jpg"),
+  reusableBg: require('./img/reusableBg.jpg'),
+  testable: require('./img/testable.jpg'),
+  painting: require('./img/painting.jpg')
 };
 
 const styles = {
@@ -100,7 +106,7 @@ export default class extends React.Component {
             </BlockQuote>
           </Appear>
         </Slide>
-        <Slide bgColor="black">
+        <Slide transition={["slide"]} bgColor="black">
           <Heading size={1} fit textColor="quartary" textFont="secondary">
             Why React JS ?
           </Heading>
@@ -181,7 +187,8 @@ export default class extends React.Component {
             #component
           </Heading>
         </Slide>
-        <Slide bgImage={images.zen} bgDarken={0.75}>
+
+        <Slide transition={["slide"]} bgImage={images.zen} bgDarken={0.75}>
           <Heading size={1} fit textColor="quartary" textFont="secondary">
             The Zen of React JS
           </Heading>
@@ -195,7 +202,7 @@ export default class extends React.Component {
 
 
 
-        <Slide bgColor="#e74c3c">
+        <Slide transition={["slide"]} bgColor="#e74c3c">
           <Heading size={1} fit textColor="white" textFont="secondary">
             What you do NOT get
           </Heading>
@@ -220,7 +227,7 @@ export default class extends React.Component {
             # Dependency Injection
           </Heading>
         </Slide>
-        <Slide bgImage={images.superheroic} bgDarken="0.3">
+        <Slide transition={["slide"]} bgImage={images.superheroic} bgDarken="0.3">
           <Heading size={2} textColor="white">
             # a superheroic framework for building web applications
           </Heading>
@@ -229,33 +236,15 @@ export default class extends React.Component {
 
 
 
-        <Slide bgColor="#e74c3c">
+        <Slide transition={["slide"]} bgColor="#e74c3c">
           <Heading size={2} textColor="white">
             # MAGIC
           </Heading>
           <Image src={images.magic} width="800"/>
         </Slide>
 
-        <Slide bgColor="black">
-          <Heading size={1} fit textColor="quartary" textFont="secondary">
-            Components are
-          </Heading>
-          <Layout>
-            <Fill>
-              <List>
-                <ListItem><Appear fid="1">composable</Appear></ListItem>
-                <ListItem><Appear fid="2">reusable</Appear></ListItem>
-                <ListItem><Appear fid="3">unit testable</Appear></ListItem>
-              </List>
-            </Fill>
-            <Fill>
-              <Appear>
-                <Image src={images.lego} height="300" />
-              </Appear>
-            </Fill>
-          </Layout>
-        </Slide>
-        <Slide>
+
+        <Slide transition={["slide"]}>
           <Heading size={1} fit textColor="quartary" textFont="secondary">
             How does a component look like ?
           </Heading>
@@ -273,6 +262,7 @@ export default class extends React.Component {
             </Heading>
           </Appear>
         </Slide>
+
         <Slide>
           <Heading size={1} fit textColor="quartary" textFont="secondary">
             How does a component look like ?
@@ -290,7 +280,7 @@ export default class extends React.Component {
           </Appear>
         </Slide>
 
-        <Slide>
+        <Slide transition={["slide"]}>
           <Heading size={1} textColor="quartary" textFont="secondary">
             JSX
           </Heading>
@@ -308,9 +298,18 @@ export default class extends React.Component {
             </Fill>
           </Layout>
         </Slide>
-        <Slide>
-          <Heading size={1} fit textColor="quartary" textFont="secondary">
-            Composable ?
+
+
+        <Slide transition={["slide"]} bgColor="#27ae60">
+          <Heading size={1} fit textColor="white" textFont="secondary">
+            Components are
+          </Heading>
+        </Slide>
+
+
+        <Slide transition={["slide"]} bgImage={images.composable} bgDarken="0.7">
+          <Heading size={1} fit textColor="white" textFont="secondary">
+            Composable
           </Heading>
           <Appear>
             <Text fit textColor="secondary">
@@ -324,9 +323,10 @@ export default class extends React.Component {
               margin="20px auto"/>
           </Appear>
         </Slide>
-        <Slide>
-          <Heading size={1} fit textColor="quartary" textFont="secondary">
-            Reusable ?
+
+        <Slide transition={["slide"]} bgImage={images.reusableBg} bgDarken="0.7">
+          <Heading size={1} fit textColor="white" textFont="secondary">
+            Reusable
           </Heading>
           <Appear>
             <Text fit textColor="secondary">
@@ -337,23 +337,77 @@ export default class extends React.Component {
             <Image src={images.reusable} height="300px" />
           </Appear>
         </Slide>
-        
-        <Slide>
-          <MinionBill />
-          <MinionJerry />
-          <MinionEvil />
+
+        <Slide transition={["slide"]} bgImage={images.testable} bgDarken="0.7">
+          <Heading size={1} fit textColor="white" textFont="secondary">
+            Unit testable
+          </Heading>
         </Slide>
 
-        <Slide bgImage={images.oneWay} bgDarken="0.7">
+        <Slide transition={["slide"]} bgImage={images.oneWay} bgDarken="0.7">
         <Heading size={1} fit textColor="quartary" textFont="secondary">
             Data Flow
           </Heading>
         </Slide>
 
-        <Slide bgImage={images.parentToChild} bgDarken="0.7">
+        <Slide transition={["slide"]} bgImage={images.parentToChild} bgDarken="0.7">
         <Heading size={1} fit textColor="quartary" textFont="secondary">
             # From parent to child
           </Heading>
+        </Slide>
+
+        <Slide transition={["slide"]} bgImage={images.parentToChild} bgDarken="0.7">
+          <CodePane
+          lang="javascript"
+          source={require("raw!./snippets/parentComponent.example")}
+          margin="20px auto"/>
+        </Slide>
+
+        <Slide transition={["slide"]} bgImage={images.parentToChild} bgDarken="0.7">
+          <CodePane
+          lang="javascript"
+          source={require("raw!./snippets/parentComponent.example")}
+          margin="20px auto"/>
+          <CodePane
+          lang="javascript"
+          source={require("raw!./snippets/childComponent.example")}
+          margin="20px auto"/>
+          <Appear>
+            <Heading size={2} fit textColor="quartary" textFont="secondary">
+              Props are immutable
+            </Heading>
+          </Appear>
+        </Slide>
+
+        <Slide transition={["slide"]} bgImage={images.parentToChild} bgDarken="0.9">
+          <Father />
+        </Slide>
+
+        <Slide transition={["slide"]}>
+          <CodePane
+          lang="javascript"
+          source={require("raw!./snippets/father.example")}
+          margin="20px auto"/>
+          <CodePane
+          lang="javascript"
+          source={require("raw!./snippets/son.example")}
+          margin="20px auto"/>
+          <Appear>
+            <Heading size={2} fit textColor="quartary" textFont="secondary">
+              State (this.setState(...)) is mutable, it forces your component to rerender.
+            </Heading>
+          </Appear>
+        </Slide>
+
+        <Slide transition={["slide"]} bgImage={images.painting} bgDarken="0.7">
+          <Heading size={1} fit textColor="quartary" textFont="secondary">
+            Rerendering
+          </Heading>
+          <Appear>
+            <Heading size={2}>
+              f(state) => View
+            </Heading>
+          </Appear>
         </Slide>
       </Deck>
     );
