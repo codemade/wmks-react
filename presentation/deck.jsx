@@ -20,14 +20,21 @@ const images = {
   github: require("./img/github.svg"),
   lego: require("./img/lego.svg"),
   seriously: require("./img/seriously.png"),
-  reusable: require("./img/reusable.jpg")
+  reusable: require("./img/reusable.jpg"),
+  apocalypse: require("./img/apocalypse.jpg"),
+  zen: require("./img/zen.jpg"),
+  superheroic: require("./img/superheroic.jpg"),
+  magic: require("./img/magic.gif"),
+  oneWay: require("./img/oneWay.jpg"),
+  parentToChild: require("./img/parentToChild.jpg")
 };
 
 const styles = {
   codemade: {width: "60px", marginTop: "-20px", filter: "grayscale(1) invert(1) contrast(1)"},
   avatar: { width: "200px", borderRadius: "100px", border: "6px double white" },
   iconTwitter: {width: "40px", verticalAlign: "middle", marginRight: "20px"},
-  iconGithub: {width: "30px", verticalAlign: "middle"}
+  iconGithub: {width: "30px", verticalAlign: "middle"},
+  superheroic: {backgroundColor:'rgba(153,0,0,0.5)'}
 };
 
 preloader([images.city, images.kat]);
@@ -106,7 +113,9 @@ export default class extends React.Component {
             </BlockQuote>
           </Appear>
         </Slide>
-        <Slide bgColor="black">
+        
+
+        <Slide transition={["slide"]} bgImage={images.apocalypse} bgDarken={0.75}>
           <Heading size={1} fit textColor="quartary" textFont="secondary">
             The root of all evil
           </Heading>
@@ -119,7 +128,22 @@ export default class extends React.Component {
             </BlockQuote>
           </Appear>
         </Slide>
-        <Slide bgColor="black">
+
+
+        <Slide bgImage={images.apocalypse} bgDarken={0.75}>
+          <Heading size={1} fit textColor="quartary" textFont="secondary">
+            The root of all evil
+          </Heading>
+          <br />
+          <BlockQuote>
+            <Quote>
+              So much STATE in UIs
+            </Quote>
+          </BlockQuote>
+        </Slide>
+
+
+        <Slide transition={["slide"]} bgImage={images.zen} bgDarken={0.75}>
           <Heading size={1} fit textColor="quartary" textFont="secondary">
             The Zen of React JS
           </Heading>
@@ -130,7 +154,7 @@ export default class extends React.Component {
             </Heading>
           </Appear>
         </Slide>
-        <Slide bgColor="black">
+        <Slide bgImage={images.zen} bgDarken={0.75}>
           <Heading size={1} fit textColor="quartary" textFont="secondary">
             The Zen of React JS
           </Heading>
@@ -139,7 +163,7 @@ export default class extends React.Component {
             #is
           </Heading>
         </Slide>
-        <Slide bgColor="black">
+        <Slide bgImage={images.zen} bgDarken={0.75}>
           <Heading size={1} fit textColor="quartary" textFont="secondary">
             The Zen of React JS
           </Heading>
@@ -148,7 +172,7 @@ export default class extends React.Component {
             #a
           </Heading>
         </Slide>
-        <Slide bgColor="black">
+        <Slide bgImage={images.zen} bgDarken={0.75}>
           <Heading size={1} fit textColor="quartary" textFont="secondary">
             The Zen of React JS
           </Heading>
@@ -157,7 +181,7 @@ export default class extends React.Component {
             #component
           </Heading>
         </Slide>
-        <Slide bgColor="black">
+        <Slide bgImage={images.zen} bgDarken={0.75}>
           <Heading size={1} fit textColor="quartary" textFont="secondary">
             The Zen of React JS
           </Heading>
@@ -168,6 +192,50 @@ export default class extends React.Component {
             </Quote>
           </BlockQuote>
         </Slide>
+
+
+
+        <Slide bgColor="#e74c3c">
+          <Heading size={1} fit textColor="white" textFont="secondary">
+            What you do NOT get
+          </Heading>
+        </Slide>
+        <Slide bgColor="#e74c3c">
+          <Heading size={2} textColor="white">
+            # (View) Model
+          </Heading>
+        </Slide>
+        <Slide bgColor="#e74c3c">
+          <Heading size={2} textColor="white">
+            # Data Binding
+          </Heading>
+        </Slide>
+        <Slide bgColor="#e74c3c">
+          <Heading size={2} textColor="white">
+            # Global Events
+          </Heading>
+        </Slide>
+        <Slide bgColor="#e74c3c">
+          <Heading size={2} textColor="white">
+            # Dependency Injection
+          </Heading>
+        </Slide>
+        <Slide bgImage={images.superheroic} bgDarken="0.3">
+          <Heading size={2} textColor="white">
+            # a superheroic framework for building web applications
+          </Heading>
+        </Slide>
+
+
+
+
+        <Slide bgColor="#e74c3c">
+          <Heading size={2} textColor="white">
+            # MAGIC
+          </Heading>
+          <Image src={images.magic} width="800"/>
+        </Slide>
+
         <Slide bgColor="black">
           <Heading size={1} fit textColor="quartary" textFont="secondary">
             Components are
@@ -197,6 +265,12 @@ export default class extends React.Component {
               lang="javascript"
               source={require("raw!./snippets/simple-component.example")}
               margin="20px auto"/>
+
+          </Appear>
+          <Appear>
+            <Heading size={2}>
+              Just JavaScript 
+            </Heading>
           </Appear>
         </Slide>
         <Slide>
@@ -208,7 +282,14 @@ export default class extends React.Component {
             lang="javascript"
             source={require("raw!./snippets/simple-component-jsx.example")}
             margin="20px auto"/>
+
+          <Appear>
+            <Heading size={2} fit>
+              JSX makes it more readable.
+            </Heading>
+          </Appear>
         </Slide>
+
         <Slide>
           <Heading size={1} textColor="quartary" textFont="secondary">
             JSX
@@ -222,6 +303,7 @@ export default class extends React.Component {
                 <ListItem><Appear fid="1">optional XML-like syntax</Appear></ListItem>
                 <ListItem><Appear fid="2">it is not HTML</Appear></ListItem>
                 <ListItem><Appear fid="3">not a templating language</Appear></ListItem>
+                <ListItem><Appear fid="3">compiles to JavaScript</Appear></ListItem>
               </List>
             </Fill>
           </Layout>
@@ -255,10 +337,23 @@ export default class extends React.Component {
             <Image src={images.reusable} height="300px" />
           </Appear>
         </Slide>
+        
         <Slide>
           <MinionBill />
           <MinionJerry />
           <MinionEvil />
+        </Slide>
+
+        <Slide bgImage={images.oneWay} bgDarken="0.7">
+        <Heading size={1} fit textColor="quartary" textFont="secondary">
+            Data Flow
+          </Heading>
+        </Slide>
+
+        <Slide bgImage={images.parentToChild} bgDarken="0.7">
+        <Heading size={1} fit textColor="quartary" textFont="secondary">
+            # From parent to child
+          </Heading>
         </Slide>
       </Deck>
     );
