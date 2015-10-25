@@ -32,7 +32,8 @@ const images = {
   composable: require("./img/composable.jpg"),
   reusableBg: require('./img/reusableBg.jpg'),
   testable: require('./img/testable.jpg'),
-  painting: require('./img/painting.jpg')
+  painting: require('./img/painting.jpg'),
+  reese: require('./img/reese.jpg')
 };
 
 const styles = {
@@ -373,7 +374,7 @@ export default class extends React.Component {
           source={require("raw!./snippets/childComponent.example")}
           margin="20px auto"/>
           <Appear>
-            <Heading size={2} fit textColor="quartary" textFont="secondary">
+            <Heading size={2} fit>
               Props are immutable
             </Heading>
           </Appear>
@@ -383,7 +384,7 @@ export default class extends React.Component {
           <Father />
         </Slide>
 
-        <Slide transition={["slide"]}>
+        <Slide transition={["slide"]} bgImage={images.parentToChild} bgDarken="0.9">
           <CodePane
           lang="javascript"
           source={require("raw!./snippets/father.example")}
@@ -393,7 +394,7 @@ export default class extends React.Component {
           source={require("raw!./snippets/son.example")}
           margin="20px auto"/>
           <Appear>
-            <Heading size={2} fit textColor="quartary" textFont="secondary">
+            <Heading size={2} fit>
               State (this.setState(...)) is mutable, it forces your component to rerender.
             </Heading>
           </Appear>
@@ -408,6 +409,14 @@ export default class extends React.Component {
               f(state) => View
             </Heading>
           </Appear>
+        </Slide>
+
+        <Slide>
+          <Heading size={1} textColor="quartary" textFont="secondary">
+            Diffing
+          </Heading>
+          <br/>
+          <Image src={images.reese} />
         </Slide>
       </Deck>
     );
