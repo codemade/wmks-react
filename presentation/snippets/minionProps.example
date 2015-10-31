@@ -1,0 +1,11 @@
+var Parent = React.createClass({
+  render: function() {
+    return (
+      <div>
+        <Minion name="Bill" mood="hungry"/>
+      </div>
+    );
+  }
+});
+
+

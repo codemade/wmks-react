@@ -2,7 +2,7 @@ var Father = React.createClass({
   render: function() {
     return (
       <div>
-        <Son message="Eat all the mice I catch for you." />
+        <Son message="Hey son, here is an advice for you!" />
       </div>
     );
   }

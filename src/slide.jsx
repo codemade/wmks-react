@@ -110,6 +110,15 @@ const Slide = React.createClass({
         padding: this.state.zoom > 0.6 ? config.margin : 10
       }
     };
+
+    var copyrightStyles = {
+      position: 'fixed',
+      left: '10px',
+      top: '10px',
+      color: 'gray',
+      fontSize: '12px'
+    };
+
     return (
       <div className="spectacle-slide"
         ref="slide"
@@ -119,6 +128,7 @@ const Slide = React.createClass({
           this.getTransitionStyles(),
           printStyles,
           this.props.presenterStyle]}>
+        <div style={copyrightStyles}>{this.props.copyright}</div>
         <div style={[styles.inner, this.context.overview && overViewStyles.inner]}>
           <div ref="content"
             className="spectacle-content"

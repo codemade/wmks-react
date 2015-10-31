@@ -11,6 +11,9 @@ import MinionBill from "./components/minion-bill.react.js";
 import MinionJerry from "./components/minion-jerry.react.js";
 import MinionEvil from "./components/minion-evil.react.js";
 
+import Minion from "./components/minion.react.js";
+import MinionMoodChanger from "./components/minionMoodChanger.react.js";
+
 import Father from './components/catFather.react.js';
 
 const images = {
@@ -23,17 +26,21 @@ const images = {
   lego: require("./img/lego.svg"),
   seriously: require("./img/seriously.png"),
   reusable: require("./img/reusable.jpg"),
-  apocalypse: require("./img/apocalypse.jpg"),
+  apocalypse: require("./img/damage.jpg"),
   zen: require("./img/zen.jpg"),
   superheroic: require("./img/superheroic.jpg"),
   magic: require("./img/magic.gif"),
-  oneWay: require("./img/oneWay.jpg"),
+  oneWay: require("./img/oneway.jpg"),
   parentToChild: require("./img/parentToChild.jpg"),
-  composable: require("./img/composable.jpg"),
-  reusableBg: require('./img/reusableBg.jpg'),
-  testable: require('./img/testable.jpg'),
+  composable: require("./img/lego.jpg"),
+  reusableBg: require('./img/recycling.jpg'),
+  testable: require('./img/crashtest.jpg'),
   painting: require('./img/painting.jpg'),
-  reese: require('./img/reese.jpg')
+  reese: require('./img/reese.jpg'),
+  surprised: require('./img/surprised.jpg'),
+  chuck: require('./img/chuck.jpg'),
+  applause: require('./img/applause.gif'),
+  vdom: require('./img/vdom.jpg')
 };
 
 const styles = {
@@ -122,7 +129,7 @@ export default class extends React.Component {
         </Slide>
         
 
-        <Slide transition={["slide"]} bgImage={images.apocalypse} bgDarken={0.75}>
+        <Slide transition={["slide"]} bgImage={images.apocalypse} bgDarken={0.75} copyright="flickr photo by xddorox http://flickr.com/photos/bikeman04/14008501053 shared under a Creative Commons (BY) license">
           <Heading size={1} fit textColor="quartary" textFont="secondary">
             The root of all evil
           </Heading>
@@ -137,7 +144,7 @@ export default class extends React.Component {
         </Slide>
 
 
-        <Slide bgImage={images.apocalypse} bgDarken={0.75}>
+        <Slide bgImage={images.apocalypse} bgDarken={0.75} copyright="flickr photo by xddorox http://flickr.com/photos/bikeman04/14008501053 shared under a Creative Commons (BY) license">
           <Heading size={1} fit textColor="quartary" textFont="secondary">
             The root of all evil
           </Heading>
@@ -150,7 +157,7 @@ export default class extends React.Component {
         </Slide>
 
 
-        <Slide transition={["slide"]} bgImage={images.zen} bgDarken={0.75}>
+        <Slide transition={["slide"]} bgImage={images.zen} bgDarken={0.75} copyright="flickr photo by RC Designer http://flickr.com/photos/rcdesigner/4047713072 shared under a Creative Commons (BY) license">
           <Heading size={1} fit textColor="quartary" textFont="secondary">
             The Zen of React JS
           </Heading>
@@ -161,7 +168,7 @@ export default class extends React.Component {
             </Heading>
           </Appear>
         </Slide>
-        <Slide bgImage={images.zen} bgDarken={0.75}>
+        <Slide bgImage={images.zen} bgDarken={0.75} copyright="flickr photo by RC Designer http://flickr.com/photos/rcdesigner/4047713072 shared under a Creative Commons (BY) license">
           <Heading size={1} fit textColor="quartary" textFont="secondary">
             The Zen of React JS
           </Heading>
@@ -170,7 +177,7 @@ export default class extends React.Component {
             #is
           </Heading>
         </Slide>
-        <Slide bgImage={images.zen} bgDarken={0.75}>
+        <Slide bgImage={images.zen} bgDarken={0.75} copyright="flickr photo by RC Designer http://flickr.com/photos/rcdesigner/4047713072 shared under a Creative Commons (BY) license">
           <Heading size={1} fit textColor="quartary" textFont="secondary">
             The Zen of React JS
           </Heading>
@@ -179,7 +186,7 @@ export default class extends React.Component {
             #a
           </Heading>
         </Slide>
-        <Slide bgImage={images.zen} bgDarken={0.75}>
+        <Slide bgImage={images.zen} bgDarken={0.75} copyright="flickr photo by RC Designer http://flickr.com/photos/rcdesigner/4047713072 shared under a Creative Commons (BY) license">
           <Heading size={1} fit textColor="quartary" textFont="secondary">
             The Zen of React JS
           </Heading>
@@ -189,7 +196,7 @@ export default class extends React.Component {
           </Heading>
         </Slide>
 
-        <Slide transition={["slide"]} bgImage={images.zen} bgDarken={0.75}>
+        <Slide transition={["slide"]} bgImage={images.zen} bgDarken={0.75} copyright="flickr photo by RC Designer http://flickr.com/photos/rcdesigner/4047713072 shared under a Creative Commons (BY) license">
           <Heading size={1} fit textColor="quartary" textFont="secondary">
             The Zen of React JS
           </Heading>
@@ -228,20 +235,23 @@ export default class extends React.Component {
             # Dependency Injection
           </Heading>
         </Slide>
-        <Slide transition={["slide"]} bgImage={images.superheroic} bgDarken="0.3">
+        <Slide bgColor="#e74c3c">
           <Heading size={2} textColor="white">
             # a superheroic framework for building web applications
           </Heading>
         </Slide>
-
-
-
 
         <Slide transition={["slide"]} bgColor="#e74c3c">
           <Heading size={2} textColor="white">
             # MAGIC
           </Heading>
           <Image src={images.magic} width="800"/>
+        </Slide>
+
+        <Slide transition={["slide"]} bgColor="#27ae60">
+          <Heading size={1} fit textColor="white">
+            React === 'Just the UI'
+          </Heading>
         </Slide>
 
 
@@ -308,7 +318,7 @@ export default class extends React.Component {
         </Slide>
 
 
-        <Slide transition={["slide"]} bgImage={images.composable} bgDarken="0.7">
+        <Slide transition={["slide"]} bgImage={images.composable} bgDarken="0.8" copyright="http://de.freeimages.com/photo/play-bricks-1-1624270">
           <Heading size={1} fit textColor="white" textFont="secondary">
             Composable
           </Heading>
@@ -325,7 +335,7 @@ export default class extends React.Component {
           </Appear>
         </Slide>
 
-        <Slide transition={["slide"]} bgImage={images.reusableBg} bgDarken="0.7">
+        <Slide transition={["slide"]} bgImage={images.reusableBg} bgDarken="0.7" copyright="flickr photo by James Cridland http://flickr.com/photos/jamescridland/393976062 shared under a Creative Commons (BY) license">
           <Heading size={1} fit textColor="white" textFont="secondary">
             Reusable
           </Heading>
@@ -339,85 +349,268 @@ export default class extends React.Component {
           </Appear>
         </Slide>
 
-        <Slide transition={["slide"]} bgImage={images.testable} bgDarken="0.7">
+        <Slide transition={["slide"]} bgImage={images.testable} bgDarken="0.7" copyright="flickr photo by greg westfall. http://flickr.com/photos/imagesbywestfall/3658162161 shared under a Creative Commons (BY) license">
           <Heading size={1} fit textColor="white" textFont="secondary">
             Unit testable
           </Heading>
         </Slide>
 
-        <Slide transition={["slide"]} bgImage={images.oneWay} bgDarken="0.7">
-        <Heading size={1} fit textColor="quartary" textFont="secondary">
-            Data Flow
-          </Heading>
-        </Slide>
-
-        <Slide transition={["slide"]} bgImage={images.parentToChild} bgDarken="0.7">
-        <Heading size={1} fit textColor="quartary" textFont="secondary">
-            # From parent to child
-          </Heading>
-        </Slide>
-
-        <Slide transition={["slide"]} bgImage={images.parentToChild} bgDarken="0.7">
-          <CodePane
-          lang="javascript"
-          source={require("raw!./snippets/parentComponent.example")}
-          margin="20px auto"/>
-        </Slide>
-
-        <Slide transition={["slide"]} bgImage={images.parentToChild} bgDarken="0.7">
-          <CodePane
-          lang="javascript"
-          source={require("raw!./snippets/parentComponent.example")}
-          margin="20px auto"/>
-          <CodePane
-          lang="javascript"
-          source={require("raw!./snippets/childComponent.example")}
-          margin="20px auto"/>
-          <Appear>
-            <Heading size={2} fit>
-              Props are immutable
-            </Heading>
-          </Appear>
-        </Slide>
-
-        <Slide transition={["slide"]} bgImage={images.parentToChild} bgDarken="0.9">
-          <Father />
-        </Slide>
-
-        <Slide transition={["slide"]} bgImage={images.parentToChild} bgDarken="0.9">
-          <CodePane
-          lang="javascript"
-          source={require("raw!./snippets/father.example")}
-          margin="20px auto"/>
-          <CodePane
-          lang="javascript"
-          source={require("raw!./snippets/son.example")}
-          margin="20px auto"/>
-          <Appear>
-            <Heading size={2} fit>
-              State (this.setState(...)) is mutable, it forces your component to rerender.
-            </Heading>
-          </Appear>
-        </Slide>
-
-        <Slide transition={["slide"]} bgImage={images.painting} bgDarken="0.7">
+        <Slide transition={["slide"]} bgImage={images.oneWay} bgDarken="0.7" copyright="flickr photo by ** RCB ** http://flickr.com/photos/29233640@N07/19206034414 shared under a Creative Commons (BY) license">
           <Heading size={1} fit textColor="quartary" textFont="secondary">
-            Rerendering
+            Data Flow
           </Heading>
           <Appear>
             <Heading size={2}>
-              f(state) => View
+              One Way
             </Heading>
           </Appear>
         </Slide>
 
+        
+
+        <Slide copyright="http://www.iconarchive.com/tag/minion">
+          <Layout>
+          <Fill>
+            <Minion name="Bill" mood="hungry"/>
+          </Fill>
+          <Fill>
+            <Appear>
+              <CodePane
+                lang="javascript"
+                source={require("raw!./snippets/minionProps.example")}
+                margin="20px auto"/>
+            </Appear>
+          </Fill>
+          </Layout>
+          <Appear>
+            <Heading size={2} fit>
+              # data is passed via props
+            </Heading>          
+          </Appear>
+        </Slide>
+
+        <Slide copyright="http://www.iconarchive.com/tag/minion">
+          <Layout>
+          <Fill>
+            <Minion name="Bill" mood="hungry"/>
+          </Fill>
+          <Fill>
+              <CodePane
+                lang="javascript"
+                source={require("raw!./snippets/minionPropChild.example")}
+                margin="20px auto"/>
+          </Fill>
+          </Layout>
+            <Heading size={2} fit>
+              # from parent to child
+            </Heading>          
+        </Slide>
+
+        <Slide copyright="http://www.iconarchive.com/tag/minion">
+          <Layout>
+          <Fill>
+            <Minion name="Bill" mood="hungry"/>
+          </Fill>
+          <Fill>
+              <CodePane
+                lang="javascript"
+                source={require("raw!./snippets/minionPropChild.example")}
+                margin="20px auto"/>
+          </Fill>
+          </Layout>
+            <Heading size={2} fit>
+              # props are immutable
+            </Heading>          
+        </Slide>
+
+        <Slide copyright="http://www.iconarchive.com/tag/minion">
+          <MinionMoodChanger />
+          <Appear>
+            <CodePane
+              lang="javascript"
+              source={require("raw!./snippets/minionState.example")}
+              margin="20px auto"/>
+          </Appear>
+          <Appear>
+            <Heading size={2} fit>
+            # state is mutable (this.setState(...))  
+            </Heading>
+          </Appear>
+        </Slide>
+
+        <Slide copyright="http://www.iconarchive.com/tag/minion">
+          <MinionMoodChanger />
+          <CodePane
+            lang="javascript"
+            source={require("raw!./snippets/minionState.example")}
+            margin="20px auto"/>
+          <Heading size={2} fit>
+          # setState will make your component re-render
+          </Heading>
+        </Slide>
+
+        <Slide copyright="http://www.iconarchive.com/tag/minion">
+          <MinionMoodChanger />
+          <CodePane
+            lang="javascript"
+            source={require("raw!./snippets/minionState.example")}
+            margin="20px auto"/>
+          <Heading size={2} fit>
+          # state is passed from parent to child via props 
+          </Heading>
+        </Slide>
+
+        <Slide transition={["slide"]} bgImage={images.painting} bgDarken="0.7" copyright="flickr photo by John-Morgan http://flickr.com/photos/aidanmorgan/2292579833 shared under a Creative Commons (BY) license">
+          <Heading size={1} fit textColor="quartary" textFont="secondary">
+            Rerendering
+          </Heading>
+          <Heading size={2}>
+            f(state) => View
+          </Heading>
+        </Slide>
+
+        <Slide bgImage={images.painting} bgDarken="0.7" copyright="flickr photo by John-Morgan http://flickr.com/photos/aidanmorgan/2292579833 shared under a Creative Commons (BY) license">
+          <Heading size={1} fit textColor="quartary" textFont="secondary">
+            Rerendering
+          </Heading>
+            <BlockQuote>
+              <Quote>
+                If you know the state, you'll know the rendered output
+              </Quote>
+            </BlockQuote>
+        </Slide>
+
+
         <Slide>
-          <Heading size={1} textColor="quartary" textFont="secondary">
-            Diffing
+          <Heading size={1}>
+            If state changes,
+          </Heading>
+          <Appear>
+            <Heading size={2}>
+              React will render everything from scratch.
+            </Heading>
+          </Appear>
+        </Slide>
+
+        <Slide bgImage={images.surprised} bgDarken="0.6" copyright="http://www.thenerdmag.com/wp-content/uploads/2015/08/Meme-Cat-Surprised.jpg">
+          <Appear>
+            <Heading size={2}>
+            Everything?
+            </Heading>
+          </Appear>
+        </Slide>
+
+        <Slide bgImage={images.surprised} bgDarken="0.6" copyright="http://www.thenerdmag.com/wp-content/uploads/2015/08/Meme-Cat-Surprised.jpg">
+            <Heading size={2}>
+            What about.....DOM?
+            </Heading>
+        </Slide>
+
+
+        <Slide>
+          <Image src={images.chuck} />
+        </Slide>
+
+        <Slide transition={["slide"]} bgColor="#27ae60">
+          <Heading size={1} fit textColor="white">
+            Solution: Virtual DOM
+          </Heading>
+        </Slide>
+
+
+        <Slide transition={["slide"]}>
+          <Heading size={1} fit>
+            on every change
+          </Heading>
+        </Slide>
+
+
+        <Slide>
+          <Heading size={1} fit>
+            Create a whole virtual DOM from scratch
+          </Heading>        
+        </Slide>
+
+        <Slide>
+          <Heading size={1}>
+            in the background
+          </Heading>
+        </Slide>
+
+
+        <Slide>
+          <Heading size={2}>
+            Find differences
           </Heading>
           <br/>
           <Image src={images.reese} />
+          <Appear>
+            <Heading size={2}>
+              between the DOM and the Virtual DOM.
+            </Heading>
+          </Appear>
         </Slide>
+
+        <Slide transition={["slide"]}>
+          <Heading size={1} fit textColor="white">
+            and rerender only parts in the real DOM 
+          </Heading>
+          <Heading size={1} fit textColor="white">
+            that changed
+          </Heading>
+        </Slide>
+
+
+        <Slide copyright="http://maerch.github.io/img/react-vdom/vdom.jpg">
+          <Image src={images.vdom}/>
+        </Slide>
+
+
+        <Slide bgColor="#27ae60">
+          <Heading size={1} fit textColor="white">
+            Virtual DOM makes re-rendering
+            <br/> 
+            on every change fast  
+          </Heading>
+        </Slide>
+
+        <Slide bgColor="#27ae60">
+          <Heading size={1} fit textColor="white">
+            because the DOM is slow
+            <br/> 
+            but JS ist fast.
+          </Heading>
+        </Slide>
+
+        <Slide>
+          <Heading size={1}>
+          Summary
+          </Heading>
+          <List>
+            <ListItem><Appear fid="1">Everything is a component</Appear></ListItem>
+            <ListItem><Appear fid="2">Components are composable, reusable and testable</Appear></ListItem>
+            <ListItem><Appear fid="3">Rerender completely if state changes</Appear></ListItem>
+            <ListItem><Appear fid="4">Virtual DOM is simple and fast</Appear></ListItem>
+            <ListItem><Appear fid="5">React has no magic</Appear></ListItem>
+          </List>
+        </Slide>
+
+        <Slide bgImage={images.applause} bgDarken="0.6">
+          <Heading size={1} fit>
+            YaY! We can render components.
+          </Heading>
+          <Appear>
+          <Heading size={1} fit>
+            And now?
+          </Heading>
+          </Appear>
+          <Appear>
+            <Heading size={2}>
+              to be continued... 
+            </Heading>
+          </Appear>
+        </Slide>
+
       </Deck>
     );
   }
