@@ -355,6 +355,9 @@ export default class extends React.Component {
           </Heading>
         </Slide>
 
+
+
+
         <Slide transition={["slide"]} bgImage={images.oneWay} bgDarken="0.7" copyright="flickr photo by ** RCB ** http://flickr.com/photos/29233640@N07/19206034414 shared under a Creative Commons (BY) license">
           <Heading size={1} fit textColor="quartary" textFont="secondary">
             Data Flow
@@ -469,17 +472,25 @@ export default class extends React.Component {
           </Heading>
         </Slide>
 
-        <Slide bgImage={images.painting} bgDarken="0.7" copyright="flickr photo by John-Morgan http://flickr.com/photos/aidanmorgan/2292579833 shared under a Creative Commons (BY) license">
-          <Heading size={1} fit textColor="quartary" textFont="secondary">
-            Rerendering
-          </Heading>
-            <BlockQuote>
-              <Quote>
-                If you know the state, you'll know the rendered output
-              </Quote>
-            </BlockQuote>
+        <Slide transition={["slide"]} bgColor="#27ae60">
+            <Heading size={1} textColor="white" textFont="secondery" fit>
+            Components ≙ Functions
+            </Heading>
+            <br/>
+            <Appear>
+              <BlockQuote>
+                <Quote>
+                  You can think of them as simple functions that take in props and state and render HTML.
+                </Quote>
+              </BlockQuote>
+            </Appear>
         </Slide>
 
+        <Slide transition={["slide"]} bgColor="#27ae60">
+          <Heading size={1} fit textColor="white">
+            ...makes them EASY TO REASON ABOUT
+          </Heading>
+        </Slide>
 
         <Slide>
           <Heading size={1}>

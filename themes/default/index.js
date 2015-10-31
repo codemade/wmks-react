@@ -2,7 +2,7 @@
 const colors = {
   primary: "black",
   secondary: "#f9c300",
-  tertiary: "gray",
+  tertiary: "white",
   quartary: "#00D8FF"
 };
 
