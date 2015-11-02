@@ -37,7 +37,8 @@ const images = {
   surprised: require("./img/surprised.jpg"),
   chuck: require("./img/chuck.jpg"),
   applause: require("./img/applause.gif"),
-  vdom: require("./img/vdom.jpg")
+  vdom: require("./img/vdom.jpg"),
+  summary: require("./img/summary.jpg")
 };
 
 const styles = {
@@ -45,7 +46,7 @@ const styles = {
   avatar: { width: "200px", borderRadius: "100px", border: "6px double white" },
   iconTwitter: {width: "40px", verticalAlign: "middle", marginRight: "20px"},
   iconGithub: {width: "30px", verticalAlign: "middle"},
-  superheroic: {backgroundColor:"rgba(153,0,0,0.5)"}
+  superheroic: {backgroundColor: "rgba(153,0,0,0.5)"}
 };
 
 preloader([images.city, images.kat]);
@@ -624,50 +625,62 @@ export default class extends React.Component {
         </Slide>
 
         <Slide bgColor="#27ae60">
-          <Heading size={1} fit textColor="white">
+          <Heading size={1} fit textColor="tertiary">
             Virtual DOM makes
-            <br />
-            re-rendering
-            <br/>
-            on every change fast
           </Heading>
+          <Appear>
+            <Heading size={2} fit textColor="quartary">
+              re-rendering
+            </Heading>
+          </Appear>
+          <Appear>
+            <Heading size={1} fit textColor="tertiary">
+              on every change fast
+            </Heading>
+          </Appear>
         </Slide>
 
         <Slide bgColor="#27ae60">
-          <Heading size={1} fit textColor="white">
+          <Heading size={1} fit textColor="tertiary">
             because the DOM
-            <br />
-            is slow
-            <br/>
-            but JS ist fast.
           </Heading>
+          <Appear>
+            <Heading size={2} fit textColor="quartary">
+              is slow
+            </Heading>
+          </Appear>
+          <Appear>
+            <Heading size={1} fit textColor="tertiary">
+              but JS is fast!
+            </Heading>
+          </Appear>
         </Slide>
 
-        <Slide>
+        <Slide bgImage={images.summary} bgDarken="0.7" copyright="flickr photo by Martin Stein https://flic.kr/p/8gjSqZ shared under a Creative Commons (BY) license">
           <Heading size={1} fit textFont="secondary" textColor="quartary">
-            Summary
+            To sum it up...
           </Heading>
         </Slide>
 
-        <Slide>
+        <Slide bgImage={images.summary} bgDarken="0.7" copyright="flickr photo by Martin Stein https://flic.kr/p/8gjSqZ shared under a Creative Commons (BY) license">
           <Heading size={1} fit textColor="secondary">
             Everything is<br />a component
           </Heading>
         </Slide>
 
-        <Slide>
+        <Slide bgImage={images.summary} bgDarken="0.7" copyright="flickr photo by Martin Stein https://flic.kr/p/8gjSqZ shared under a Creative Commons (BY) license">
           <Heading size={1} fit textColor="secondary">
             Re-Render completely<br />when state changes
           </Heading>
         </Slide>
 
-        <Slide>
+        <Slide bgImage={images.summary} bgDarken="0.7" copyright="flickr photo by Martin Stein https://flic.kr/p/8gjSqZ shared under a Creative Commons (BY) license">
           <Heading size={1} fit textColor="secondary">
             Virtual DOM<br />is simple and fast
           </Heading>
         </Slide>
 
-        <Slide>
+        <Slide bgImage={images.summary} bgDarken="0.7" copyright="flickr photo by Martin Stein https://flic.kr/p/8gjSqZ shared under a Creative Commons (BY) license">
           <Heading size={1} fit textColor="secondary">
             React has no magic
           </Heading>

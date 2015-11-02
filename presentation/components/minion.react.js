@@ -8,7 +8,8 @@ var Minion = React.createClass({
 			backgroundSize: '150px',
 			width: '150px',
 			height: '200px',
-			position: 'relative'
+			position: 'relative',
+			textAlign: 'center'
 		};
 		return styles;
 	},
@@ -18,14 +19,15 @@ var Minion = React.createClass({
 			position: 'absolute',
 			bottom: 0,
 			left: 0,
-			fontSize:'22px',
+			width: '150px',
+			fontSize:'18px',
 			fontWeight: 'bold',
 			color: 'white'
 		};
 
 		return <div>
 			<div style={styles}>
-				<div style={textStyles}>Hey I'm {this.props.name} and I am {this.props.mood}!</div>
+				<div style={textStyles}>Hey I'm {this.props.name}<br />and I am {this.props.mood}!</div>
 			</div>
 		</div>;
 	}
