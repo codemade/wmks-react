@@ -9,7 +9,7 @@ var Minion = React.createClass({
 			width: '150px',
 			height: '200px',
 			position: 'relative'
-		};		
+		};
 		return styles;
 	},
 	render() {
@@ -23,9 +23,9 @@ var Minion = React.createClass({
 			color: 'white'
 		};
 
-		return <div> 
+		return <div>
 			<div style={styles}>
-				<div style={textStyles}>Hy i'm {this.props.name} and i'm {this.props.mood}!</div>
+				<div style={textStyles}>Hey I'm {this.props.name} and I am {this.props.mood}!</div>
 			</div>
 		</div>;
 	}

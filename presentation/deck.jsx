@@ -7,10 +7,6 @@ import {
 
 import preloader from "../src/utils/preloader";
 
-import MinionBill from "./components/minion-bill.react.js";
-import MinionJerry from "./components/minion-jerry.react.js";
-import MinionEvil from "./components/minion-evil.react.js";
-
 import Minion from "./components/minion.react.js";
 import MinionMoodChanger from "./components/minionMoodChanger.react.js";
 
@@ -33,15 +29,15 @@ const images = {
   oneWay: require("./img/oneway.jpg"),
   parentToChild: require("./img/parentToChild.jpg"),
   composable: require("./img/lego.jpg"),
-  reusableBg: require('./img/recycling.jpg'),
-  testable: require('./img/crashtest.jpg'),
-  painting: require('./img/painting.jpg'),
-  reeseWith: require('./img/reese-with.jpg'),
-  reeseWithout: require('./img/reese-without.jpg'),
-  surprised: require('./img/surprised.jpg'),
-  chuck: require('./img/chuck.jpg'),
-  applause: require('./img/applause.gif'),
-  vdom: require('./img/vdom.jpg')
+  reusableBg: require("./img/recycling.jpg"),
+  testable: require("./img/crashtest.jpg"),
+  painting: require("./img/painting.jpg"),
+  reeseWith: require("./img/reese-with.jpg"),
+  reeseWithout: require("./img/reese-without.jpg"),
+  surprised: require("./img/surprised.jpg"),
+  chuck: require("./img/chuck.jpg"),
+  applause: require("./img/applause.gif"),
+  vdom: require("./img/vdom.jpg")
 };
 
 const styles = {
@@ -49,7 +45,7 @@ const styles = {
   avatar: { width: "200px", borderRadius: "100px", border: "6px double white" },
   iconTwitter: {width: "40px", verticalAlign: "middle", marginRight: "20px"},
   iconGithub: {width: "30px", verticalAlign: "middle"},
-  superheroic: {backgroundColor:'rgba(153,0,0,0.5)'}
+  superheroic: {backgroundColor:"rgba(153,0,0,0.5)"}
 };
 
 preloader([images.city, images.kat]);
@@ -125,7 +121,9 @@ export default class extends React.Component {
           <br />
           <Appear>
             <Text textColor="secondary">
-              How to build applications with data, that changes over time?
+              How to build applications<br />
+              with data<br />
+              that changes over time?
             </Text>
           </Appear>
         </Slide>
@@ -156,10 +154,12 @@ export default class extends React.Component {
           </BlockQuote>
         </Slide>
 
-        <Slide transition={["slide"]} bgImage={images.zen} bgDarken={0.75} copyright="flickr photo by RC Designer http://flickr.com/photos/rcdesigner/4047713072 shared under a Creative Commons (BY) license">
-          <Heading size={1} fit textColor="quartary" textFont="secondary">
-            The Zen of React JS
-          </Heading>
+        <Slide bgImage={images.zen} bgDarken={0.75} copyright="flickr photo by RC Designer http://flickr.com/photos/rcdesigner/4047713072 shared under a Creative Commons (BY) license">
+          <Appear>
+            <Heading size={1} fit textColor="quartary" textFont="secondary">
+              The Zen of React JS
+            </Heading>
+          </Appear>
           <br />
           <Appear>
             <Heading size={2}>
@@ -196,51 +196,45 @@ export default class extends React.Component {
         </Slide>
 
         <Slide bgImage={images.zen} bgDarken={0.75} copyright="flickr photo by RC Designer http://flickr.com/photos/rcdesigner/4047713072 shared under a Creative Commons (BY) license">
-          <Heading size={1} fit textColor="quartary" textFont="secondary">
-            The Zen of React JS
+          <Heading textFont="primary" textColor="quartary">
+            Break down the UI in components
           </Heading>
-          <br />
-          <BlockQuote>
-            <Quote>
-              Break down the UI in components
-            </Quote>
-          </BlockQuote>
         </Slide>
 
         <Slide transition={["slide"]} bgColor="#e74c3c">
-          <Heading size={1} fit textColor="white" textFont="secondary">
+          <Heading size={1} fit textColor="tertiary" textFont="primary">
             What you do NOT get
           </Heading>
         </Slide>
         <Slide bgColor="#e74c3c" bgImage={images.superheroic} >
-          <Heading size={2} textColor="white">
+          <Heading size={1} fit textColor="white">
             # (View) Model
           </Heading>
         </Slide>
         <Slide bgColor="#e74c3c" bgImage={images.superheroic} >
-          <Heading size={2} textColor="white">
+          <Heading size={1} fit textColor="white">
             # Data Binding
           </Heading>
         </Slide>
         <Slide bgColor="#e74c3c" bgImage={images.superheroic} >
-          <Heading size={2} textColor="white">
+          <Heading size={1} fit textColor="white">
             # Global Events
           </Heading>
         </Slide>
         <Slide bgColor="#e74c3c" bgImage={images.superheroic} >
-          <Heading size={2} textColor="white">
+          <Heading size={1} fit textColor="white">
             # Dependency Injection
           </Heading>
         </Slide>
         <Slide bgColor="#e74c3c" bgImage={images.superheroic} >
-          <Heading size={2} textColor="white">
-            # a superheroic framework for building web applications
+          <Heading size={1} fit textColor="white">
+            # no superheroic framework
           </Heading>
         </Slide>
 
         <Slide bgColor="#e74c3c" bgImage={images.superheroic} >
           <Heading size={2} textColor="white">
-            # MAGIC
+            # NO MAGIC
           </Heading>
           <Image src={images.magic} width="800"/>
         </Slide>
@@ -261,7 +255,6 @@ export default class extends React.Component {
               lang="javascript"
               source={require("raw!./snippets/simple-component.example")}
               margin="20px auto"/>
-
           </Appear>
           <Appear>
             <Heading size={2}>
@@ -293,7 +286,9 @@ export default class extends React.Component {
           </Heading>
           <Layout>
             <Fill>
-              <Image src={images.seriously} />
+              <Appear>
+                <Image src={images.seriously} />
+              </Appear>
             </Fill>
             <Fill>
               <List>
@@ -360,11 +355,9 @@ export default class extends React.Component {
         </Slide>
 
         <Slide copyright="http://www.iconarchive.com/tag/minion">
-          <Appear>
-            <Heading size={2} fit>
-              # data is passed via props
-            </Heading>
-          </Appear>
+          <Heading size={4} textColor="secondary">
+            # data is passed via props
+          </Heading>
           <br />
           <Layout>
             <Fill>
@@ -384,7 +377,7 @@ export default class extends React.Component {
         </Slide>
 
         <Slide copyright="http://www.iconarchive.com/tag/minion">
-          <Heading size={2} fit>
+          <Heading size={4} textColor="secondary">
             # from parent to child
           </Heading>
           <br />
@@ -402,7 +395,7 @@ export default class extends React.Component {
         </Slide>
 
         <Slide copyright="http://www.iconarchive.com/tag/minion">
-          <Heading size={2} fit>
+          <Heading size={4} textColor="secondary">
             # props are immutable
           </Heading>
           <br />
@@ -420,45 +413,39 @@ export default class extends React.Component {
         </Slide>
 
         <Slide copyright="http://www.iconarchive.com/tag/minion">
-          <Heading size={2} fit>
+          <Heading size={4} textColor="secondary">
             # state is mutable
           </Heading>
-          <br />
           <Appear>
             <CodePane
               lang="javascript"
               source={require("raw!./snippets/minionState.example")}
               margin="20px auto"/>
           </Appear>
-          <br />
           <Appear>
             <MinionMoodChanger />
           </Appear>
         </Slide>
 
         <Slide copyright="http://www.iconarchive.com/tag/minion">
-          <Heading size={2} fit>
-          # setState will make your component re-render
+          <Heading size={4} textColor="secondary">
+            # setState => re-render component
           </Heading>
-          <br />
           <CodePane
             lang="javascript"
             source={require("raw!./snippets/minionState.example")}
             margin="20px auto"/>
-          <br />
           <MinionMoodChanger />
         </Slide>
 
         <Slide copyright="http://www.iconarchive.com/tag/minion">
-          <Heading size={2} fit>
-            # state is passed from parent to child via props
+          <Heading size={4} textColor="secondary">
+            # pass state via props
           </Heading>
-          <br />
           <CodePane
             lang="javascript"
             source={require("raw!./snippets/minionState.example")}
             margin="20px auto"/>
-          <br />
           <MinionMoodChanger />
         </Slide>
 
@@ -585,34 +572,48 @@ export default class extends React.Component {
             Spot the differences
           </Heading>
           <br/>
-          <Layout>
-            <Fill>
-              <Image src={images.reeseWith} />
-              <Appear>
-                Reese Witherspoon
-              </Appear>
-            </Fill>
-            <Fill>
-              <Image src={images.reeseWithout} />
-              <Appear>
-                Reese Withoutherspoon
-              </Appear>
-            </Fill>
-          </Layout>
+          <Appear>
+            <Layout>
+              <Fill>
+                <Image src={images.reeseWith} />
+                <Appear>
+                  <Text textColor="secondary">
+                    Reese Witherspoon
+                  </Text>
+                </Appear>
+              </Fill>
+              <Fill>
+                <Image src={images.reeseWithout} />
+                <Appear>
+                  <Text textColor="secondary">
+                    Reese Withoutherspoon
+                  </Text>
+                </Appear>
+              </Fill>
+            </Layout>
+          </Appear>
+        </Slide>
+
+        <Slide>
+          <Heading size={2} textFont="secondary" textColor="quartary">
+            Spot the differences
+          </Heading>
+          <br />
+          <br />
           <br />
           <Appear>
-            <Heading size={2}>
-              between the DOM and the Virtual DOM...
+            <Heading size={2} textColor="secondary">
+              between the DOM and the Virtual DOM
             </Heading>
           </Appear>
         </Slide>
 
         <Slide transition={["slide"]}>
-          <Heading size={1} fit textColor="white">
-            and re-render only parts in the real DOM
+          <Heading size={1} fit textColor="tertiary">
+            ...and re-render only parts<br />in the real DOM
           </Heading>
           <Appear>
-            <Heading size={1} fit textColor="white">
+            <Heading size={1} fit textColor="quartary">
               that changed
             </Heading>
           </Appear>
@@ -624,7 +625,9 @@ export default class extends React.Component {
 
         <Slide bgColor="#27ae60">
           <Heading size={1} fit textColor="white">
-            Virtual DOM makes re-rendering
+            Virtual DOM makes
+            <br />
+            re-rendering
             <br/>
             on every change fast
           </Heading>
@@ -632,7 +635,9 @@ export default class extends React.Component {
 
         <Slide bgColor="#27ae60">
           <Heading size={1} fit textColor="white">
-            because the DOM is slow
+            because the DOM
+            <br />
+            is slow
             <br/>
             but JS ist fast.
           </Heading>
@@ -669,7 +674,7 @@ export default class extends React.Component {
         </Slide>
 
         <Slide bgImage={images.applause} bgDarken="0.6">
-          <Heading size={1} fit textColor="secondary">
+          <Heading size={1} fit textColor="quartary">
             YaY!<br />We can render components.
           </Heading>
           <br />
