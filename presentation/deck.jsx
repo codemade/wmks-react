@@ -59,7 +59,40 @@ const styles = {
   superheroic: {backgroundColor:'rgba(153,0,0,0.5)'}
 };
 
-preloader([images.city, images.kat]);
+preloader([
+  images.react,
+  images.codemade,
+  images.chrkhl,
+  images.revrng,
+  images.twitter,
+  images.github,
+  images.lego,
+  images.seriously,
+  images.reusable,
+  images.apocalypse,
+  images.zen,
+  images.superheroic,
+  images.magic,
+  images.view,
+  images.questioning,
+  images.oneWay,
+  images.parentToChild,
+  images.composable,
+  images.reusableBg,
+  images.testable,
+  images.painting,
+  images.function,
+  images.fast,
+  images.reeseWith,
+  images.reeseWithout,
+  images.surprised,
+  images.chuck,
+  images.applause,
+  images.vdom0,
+  images.vdom1,
+  images.vdom2,
+  images.vdom3
+]);
 
 export default class extends React.Component {
   render() {
