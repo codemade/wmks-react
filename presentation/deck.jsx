@@ -320,13 +320,13 @@ export default class extends React.Component {
         </Slide>
 
         <Slide transition={["slide"]} bgColor="#27ae60">
-          <Heading size={1} fit textColor="white" textFont="secondary">
+          <Heading size={1} fit textColor="tertiary" textFont="secondary">
             Components are
           </Heading>
         </Slide>
 
         <Slide transition={["slide"]} bgImage={images.composable} bgDarken="0.8" copyright="http://de.freeimages.com/photo/play-bricks-1-1624270">
-          <Heading size={1} fit textColor="white" textFont="secondary">
+          <Heading size={1} fit textColor="tertiary" textFont="secondary">
             Composable
           </Heading>
           <br />
@@ -344,7 +344,7 @@ export default class extends React.Component {
         </Slide>
 
         <Slide transition={["slide"]} bgImage={images.reusableBg} bgDarken="0.7" copyright="flickr photo by James Cridland http://flickr.com/photos/jamescridland/393976062 shared under a Creative Commons (BY) license">
-          <Heading size={1} fit textColor="white" textFont="secondary">
+          <Heading size={1} fit textColor="tertiary" textFont="secondary">
             Reusable
           </Heading>
           <br />
@@ -356,7 +356,7 @@ export default class extends React.Component {
         </Slide>
 
         <Slide transition={["slide"]} bgImage={images.testable} bgDarken="0.7" copyright="flickr photo by greg westfall. http://flickr.com/photos/imagesbywestfall/3658162161 shared under a Creative Commons (BY) license">
-          <Heading size={1} fit textColor="white" textFont="secondary">
+          <Heading size={1} fit textColor="tertiary" textFont="secondary">
             Unit testable
           </Heading>
         </Slide>
@@ -483,7 +483,7 @@ export default class extends React.Component {
         </Slide>
 
         <Slide transition={["slide"]} bgColor="#27ae60" bgDarken="0.8" bgImage={images.function} copyright="flickr photo by remography https://flic.kr/p/9ngvf shared under a Creative Commons (BY) license">
-            <Heading size={1} textColor="white" textFont="secondary" fit>
+            <Heading size={1} textColor="quartary" textFont="secondary" fit>
               Components ≙ Functions
             </Heading>
             <br/>
@@ -499,7 +499,7 @@ export default class extends React.Component {
         </Slide>
 
         <Slide transition={["slide"]} bgColor="#27ae60">
-          <Heading size={1} fit textColor="white" textFont="secondary">
+          <Heading size={1} fit textColor="tertiary" textFont="secondary">
             Easy to reason about!
           </Heading>
         </Slide>
@@ -521,11 +521,9 @@ export default class extends React.Component {
         </Slide>
 
         <Slide bgImage={images.surprised} bgDarken="0.6" copyright="http://www.thenerdmag.com/wp-content/uploads/2015/08/Meme-Cat-Surprised.jpg">
-          <Appear>
             <Heading size={1} fit>
               Everything?
             </Heading>
-          </Appear>
         </Slide>
 
         <Slide bgImage={images.surprised} bgDarken="0.6" copyright="http://www.thenerdmag.com/wp-content/uploads/2015/08/Meme-Cat-Surprised.jpg">
@@ -551,11 +549,11 @@ export default class extends React.Component {
         </Slide>
 
         <Slide transition={["slide"]} bgColor="#27ae60">
-          <Heading size={2} fit textColor="white">
+          <Heading size={2} fit textColor="tertiary">
             Solution:
           </Heading>
           <Appear>
-            <Heading size={1}>
+            <Heading size={1} fit textColor="secondary">
                Virtual DOM!
             </Heading>
           </Appear>
@@ -565,15 +563,13 @@ export default class extends React.Component {
           <Heading size={1} fit>
             on every change
           </Heading>
-        </Slide>
-
-        <Slide>
-          <Heading size={1} fit textColor="quartary">
-            Create a whole
-          </Heading>
-          <br />
           <Appear>
-            <Heading size={1} fit>
+            <Heading size={1} fit textColor="quartary">
+              Create a whole
+            </Heading>
+          </Appear>
+          <Appear>
+            <Heading size={1} fit textColor="secondary">
               virtual DOM
             </Heading>
           </Appear>
@@ -587,12 +583,12 @@ export default class extends React.Component {
 
         <Slide>
           <Heading size={1} fit textFont="secondary" textColor="secondary">
-            in the background
+            in the<br />background
           </Heading>
         </Slide>
 
         <Slide>
-          <Heading size={2} textFont="secondary" textColor="quartary">
+          <Heading fit size={2} textFont="secondary" textColor="quartary">
             Spot the differences
           </Heading>
           <br/>
@@ -610,12 +606,18 @@ export default class extends React.Component {
               </Appear>
             </Fill>
           </Layout>
-          <br />
-          <Appear>
-            <Heading size={2} textColor="tertiary">
-              between the DOM and the Virtual DOM...
-            </Heading>
-          </Appear>
+        </Slide>
+
+        <Slide>
+          <Heading size={2} fit textFont="secondary" textColor="quartary">
+            Spot the differences
+          </Heading>
+          <Heading size={1} textColor="secondary">
+            between
+          </Heading>
+          <Heading size={2} textColor="tertiary">
+            DOM and Virtual DOM...
+          </Heading>
         </Slide>
 
         <Slide transition={["slide"]}>
@@ -658,19 +660,35 @@ export default class extends React.Component {
         </Slide>
 
         <Slide bgColor="#27ae60">
-          <Heading size={1} fit textColor="white">
-            Virtual DOM makes re-rendering
-            <br/>
-            on every change fast
+          <Heading size={1} fit textColor="tertiary">
+            Virtual DOM
           </Heading>
+          <Appear>
+            <Heading size={1} fit textColor="secondary">
+              makes re-rendering
+            </Heading>
+          </Appear>
+          <Appear>
+            <Heading size={1} fit textColor="tertiary">
+              on every change fast
+            </Heading>
+          </Appear>
         </Slide>
 
         <Slide bgColor="#27ae60">
-          <Heading size={1} fit textColor="white">
-            because the DOM is slow
-            <br/>
-            but JS ist fast.
+          <Heading size={1} fit textColor="secondary">
+            because
           </Heading>
+          <Appear>
+            <Heading size={1} fit textColor="tertiary">
+              the DOM is slow
+            </Heading>
+          </Appear>
+          <Appear>
+            <Heading size={1} fit textColor="secondary">
+              but JS ist fast.
+            </Heading>
+          </Appear>
         </Slide>
 
         <Slide>
@@ -679,31 +697,49 @@ export default class extends React.Component {
           </Heading>
         </Slide>
 
-        <Slide>
+        <Slide bgImage={images.composable} bgDarken="0.8" copyright="http://de.freeimages.com/photo/play-bricks-1-1624270">
           <Heading size={1} fit textColor="secondary">
-            Everything is<br />a component
+            Everything
+          </Heading>
+          <Heading size={1} fit textColor="tertiary">
+            is a component
           </Heading>
         </Slide>
 
-        <Slide>
+        <Slide bgImage={images.painting} bgDarken="0.7" copyright="flickr photo by John-Morgan http://flickr.com/photos/aidanmorgan/2292579833 shared under a Creative Commons (BY) license">
           <Heading size={1} fit textColor="secondary">
-            Re-Render completely<br />when state changes
+            Re-Render completely
+          </Heading>
+          <Heading size={1} fit textColor="tertiary">
+            when state changes
           </Heading>
         </Slide>
 
-        <Slide>
+        <Slide bgImage={images.fast} bgDarken="0.7" copyright="flickr photo by Manuel Mira Godinho https://flic.kr/p/539PAK shared under a Creative Commons (BY) license">
           <Heading size={1} fit textColor="secondary">
-            Virtual DOM<br />is simple and fast
+            Virtual DOM
+          </Heading>
+          <Heading size={1} fit textColor="tertiary">
+            is simple and fast
           </Heading>
         </Slide>
 
-        <Slide>
+        <Slide bgImage={images.oneWay} bgDarken="0.8" copyright="flickr photo by Eric Magnuson https://flic.kr/p/65SvMR shared under a Creative Commons (BY) license">
           <Heading size={1} fit textColor="secondary">
+            One way data flow
+          </Heading>
+          <Heading size={1} fit textColor="tertiary">
+            from parent to child
+          </Heading>
+        </Slide>
+
+        <Slide bgDarken="0.7" bgImage={images.magic}>
+          <Heading size={1} fit textColor="tertiary">
             React has no magic
           </Heading>
         </Slide>
 
-        <Slide bgImage={images.applause} bgDarken="0.6">
+        <Slide bgImage={images.applause} bgDarken="0.5">
           <Heading size={1} fit textColor="secondary">
             YaY!<br />We can render components.
           </Heading>
