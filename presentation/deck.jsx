@@ -7,14 +7,8 @@ import {
 
 import preloader from "../src/utils/preloader";
 
-import MinionBill from "./components/minion-bill.react.js";
-import MinionJerry from "./components/minion-jerry.react.js";
-import MinionEvil from "./components/minion-evil.react.js";
-
 import Minion from "./components/minion.react.js";
 import MinionMoodChanger from "./components/minionMoodChanger.react.js";
-
-import Father from './components/catFather.react.js';
 
 const images = {
   react: require("./img/react.svg"),
@@ -23,9 +17,7 @@ const images = {
   revrng: require("./img/revrng.png"),
   twitter: require("./img/twitter.svg"),
   github: require("./img/github.svg"),
-  lego: require("./img/lego.svg"),
   seriously: require("./img/seriously.png"),
-  reusable: require("./img/reusable.jpg"),
   apocalypse: require("./img/damage.jpg"),
   zen: require("./img/zen.jpg"),
   superheroic: require("./img/superheroic.jpg"),
@@ -33,7 +25,6 @@ const images = {
   view: require("./img/view.jpg"),
   questioning: require("./img/questioning.jpg"),
   oneWay: require("./img/oneway.jpg"),
-  parentToChild: require("./img/parentToChild.jpg"),
   composable: require("./img/lego.jpg"),
   reusableBg: require("./img/recycling.jpg"),
   testable: require("./img/crashtest.jpg"),
