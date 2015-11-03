@@ -35,20 +35,21 @@ const images = {
   oneWay: require("./img/oneway.jpg"),
   parentToChild: require("./img/parentToChild.jpg"),
   composable: require("./img/lego.jpg"),
-  reusableBg: require('./img/recycling.jpg'),
-  testable: require('./img/crashtest.jpg'),
-  painting: require('./img/painting.jpg'),
-  function: require('./img/function.jpg'),
-  fast: require('./img/fast.jpg'),
-  reeseWith: require('./img/reese-with.jpg'),
-  reeseWithout: require('./img/reese-without.jpg'),
-  surprised: require('./img/surprised.jpg'),
-  chuck: require('./img/chuck.jpg'),
-  applause: require('./img/applause.gif'),
-  vdom0: require('./img/vdom0.png'),
-  vdom1: require('./img/vdom1.png'),
-  vdom2: require('./img/vdom2.png'),
-  vdom3: require('./img/vdom3.png')
+  reusableBg: require("./img/recycling.jpg"),
+  testable: require("./img/crashtest.jpg"),
+  painting: require("./img/painting.jpg"),
+  function: require("./img/function.jpg"),
+  fast: require("./img/fast.jpg"),
+  reeseWith: require("./img/reese-with.jpg"),
+  reeseWithout: require("./img/reese-without.jpg"),
+  surprised: require("./img/surprised.jpg"),
+  chuck: require("./img/chuck.jpg"),
+  applause: require("./img/applause.gif"),
+  vdom0: require("./img/vdom0.png"),
+  vdom1: require("./img/vdom1.png"),
+  vdom2: require("./img/vdom2.png"),
+  vdom3: require("./img/vdom3.png"),
+  summary: require("./img/summary.jpg")
 };
 
 const styles = {
@@ -56,7 +57,7 @@ const styles = {
   avatar: { width: "200px", borderRadius: "100px", border: "6px double white" },
   iconTwitter: {width: "40px", verticalAlign: "middle", marginRight: "20px"},
   iconGithub: {width: "30px", verticalAlign: "middle"},
-  superheroic: {backgroundColor:'rgba(153,0,0,0.5)'}
+  superheroic: {backgroundColor: "rgba(153,0,0,0.5)"}
 };
 
 preloader([
@@ -99,7 +100,7 @@ export default class extends React.Component {
     return (
       <Deck transitionDuration={800}>
         <Slide transition={["slide"]}>
-          <Heading textSize="12em" lineHeight={0.1} textColor="quartary" textFont="secondary">
+          <Heading textSize="12em" lineHeight={0.1} textColor="tertiary" textFont="secondary">
             React JS
           </Heading>
           <Image src={images.react} height="300px"/>
@@ -114,7 +115,7 @@ export default class extends React.Component {
           </Heading>
           <Layout>
             <Fill>
-              <Text textColor="secondary">
+              <Text textColor="tertiary">
                 <Image src={images.revrng} style={styles.avatar}/>
                 <br />
                 René Viering
@@ -128,7 +129,7 @@ export default class extends React.Component {
               </Text>
             </Fill>
             <Fill>
-              <Text textColor="secondary">
+              <Text textColor="tertiary">
                 <Image src={images.chrkhl} style={styles.avatar}/>
                 <br />
                 Christian Kühl
@@ -165,7 +166,9 @@ export default class extends React.Component {
           <br />
           <Appear>
             <Text textColor="secondary">
-              How to build applications with data, that changes over time?
+              How to build applications<br />
+              with data<br />
+              that changes over time?
             </Text>
           </Appear>
         </Slide>
@@ -236,15 +239,9 @@ export default class extends React.Component {
         </Slide>
 
         <Slide bgImage={images.zen} bgDarken={0.75} copyright="flickr photo by RC Designer http://flickr.com/photos/rcdesigner/4047713072 shared under a Creative Commons (BY) license">
-          <Heading size={1} fit textColor="quartary" textFont="secondary">
-            The Zen of React JS
+          <Heading textFont="primary" textColor="quartary">
+            Break down the UI in components
           </Heading>
-          <br />
-          <BlockQuote>
-            <Quote>
-              Break down the UI in components
-            </Quote>
-          </BlockQuote>
         </Slide>
 
         <Slide transition={["slide"]} bgColor="#e74c3c">
@@ -274,7 +271,7 @@ export default class extends React.Component {
         </Slide>
         <Slide bgColor="#e74c3c" bgDarken="0.7" bgImage={images.superheroic} copyright="flickr photo by JD Hancock https://flic.kr/p/7E5DeZ shared under a Creative Commons (BY) license">
           <Heading size={2} textColor="tertiary">
-            # a superheroic framework for building web applications
+            # a superheroic framework
           </Heading>
         </Slide>
 
@@ -295,7 +292,8 @@ export default class extends React.Component {
           <Heading size={1} fit textColor="quartary" textFont="secondary">
             How does a component look like ?
           </Heading>
-          <Image src={images.questioning} />
+          <br />
+          <Image src={images.questioning} width="300" />
         </Slide>
 
         <Slide>
@@ -582,11 +580,11 @@ export default class extends React.Component {
         </Slide>
 
         <Slide transition={["slide"]} bgColor="#27ae60">
-          <Heading size={2} fit textColor="tertiary">
+          <Heading size={2} fit textColor="#005057">
             Solution:
           </Heading>
           <Appear>
-            <Heading size={1} fit textColor="secondary">
+            <Heading size={1} fit textColor="tertiary">
                Virtual DOM!
             </Heading>
           </Appear>
@@ -597,7 +595,7 @@ export default class extends React.Component {
             on every change
           </Heading>
           <Appear>
-            <Heading size={1} fit textColor="quartary">
+            <Heading size={1} textColor="quartary">
               Create a whole
             </Heading>
           </Appear>
@@ -608,7 +606,7 @@ export default class extends React.Component {
           </Appear>
           <br />
           <Appear>
-            <Heading size={1} fit textColor="quartary">
+            <Heading size={1} textColor="quartary">
               from scratch
             </Heading>
           </Appear>
@@ -629,13 +627,17 @@ export default class extends React.Component {
             <Fill>
               <Image src={images.reeseWith} />
               <Appear>
-                Reese Witherspoon
+                <Text textColor="secondary">
+                  Reese Witherspoon
+                </Text>
               </Appear>
             </Fill>
             <Fill>
               <Image src={images.reeseWithout} />
               <Appear>
-                Reese Withoutherspoon
+                <Text textColor="secondary">
+                  Reese Withoutherspoon
+                </Text>
               </Appear>
             </Fill>
           </Layout>
@@ -649,13 +651,15 @@ export default class extends React.Component {
             between
           </Heading>
           <Heading size={2} textColor="tertiary">
-            DOM and Virtual DOM...
+            DOM and Virtual DOM
           </Heading>
         </Slide>
 
         <Slide transition={["slide"]}>
           <Heading size={1} fit textColor="tertiary">
-            and re-render only parts in the real DOM
+            ... and re-render only parts
+            <br />
+            in the real DOM
           </Heading>
           <Appear>
             <Heading size={1} fit textColor="secondary">
@@ -668,28 +672,32 @@ export default class extends React.Component {
           <Heading size={1} textColor="quartary" textFont="secondary">
             Initial
           </Heading>
-          <Image src={images.vdom0}/>
+          <br />
+          <Image src={images.vdom0} height="300" />
         </Slide>
 
         <Slide bgImage={images.fast} bgDarken="0.8" copyright="flickr photo by Manuel Mira Godinho https://flic.kr/p/539PAK shared under a Creative Commons (BY) license">
           <Heading size={1} textColor="quartary" textFont="secondary">
             Set State
           </Heading>
-          <Image src={images.vdom1}/>
+          <br />
+          <Image src={images.vdom1} height="300" />
         </Slide>
 
         <Slide bgImage={images.fast} bgDarken="0.8" copyright="flickr photo by Manuel Mira Godinho https://flic.kr/p/539PAK shared under a Creative Commons (BY) license">
           <Heading size={1} textColor="quartary" textFont="secondary">
             Find differences
           </Heading>
-          <Image src={images.vdom2}/>
+          <br />
+          <Image src={images.vdom2} height="300" />
         </Slide>
 
         <Slide bgImage={images.fast} bgDarken="0.8" copyright="flickr photo by Manuel Mira Godinho https://flic.kr/p/539PAK shared under a Creative Commons (BY) license">
           <Heading size={1} textColor="quartary" textFont="secondary">
             Re-Render
           </Heading>
-          <Image src={images.vdom3}/>
+          <br />
+          <Image src={images.vdom3} height="300" />
         </Slide>
 
         <Slide bgColor="#27ae60">
@@ -697,7 +705,7 @@ export default class extends React.Component {
             Virtual DOM
           </Heading>
           <Appear>
-            <Heading size={1} fit textColor="secondary">
+            <Heading size={1} fit textColor="#005057">
               makes re-rendering
             </Heading>
           </Appear>
@@ -709,28 +717,28 @@ export default class extends React.Component {
         </Slide>
 
         <Slide bgColor="#27ae60">
-          <Heading size={1} fit textColor="secondary">
+          <Heading size={1} fit textColor="tertiary">
             because
           </Heading>
           <Appear>
-            <Heading size={1} fit textColor="tertiary">
+            <Heading size={1} fit textColor="#005057">
               the DOM is slow
             </Heading>
           </Appear>
           <Appear>
-            <Heading size={1} fit textColor="secondary">
-              but JS ist fast.
+            <Heading size={1} fit textColor="tertiary">
+              but JS ist fast!
             </Heading>
           </Appear>
         </Slide>
 
-        <Slide>
+        <Slide bgImage={images.summary} bgDarken="0.7" copyright="flickr photo by Martin Stein https://flic.kr/p/8gjSqZ shared under a Creative Commons (BY) license">
           <Heading size={1} fit textFont="secondary" textColor="quartary">
-            Summary
+            To sum it up...
           </Heading>
         </Slide>
 
-        <Slide bgImage={images.composable} bgDarken="0.8" copyright="http://de.freeimages.com/photo/play-bricks-1-1624270">
+        <Slide bgImage={images.summary} bgDarken="0.7" copyright="flickr photo by Martin Stein https://flic.kr/p/8gjSqZ shared under a Creative Commons (BY) license">
           <Heading size={1} fit textColor="secondary">
             Everything
           </Heading>
@@ -739,7 +747,7 @@ export default class extends React.Component {
           </Heading>
         </Slide>
 
-        <Slide bgImage={images.painting} bgDarken="0.7" copyright="flickr photo by John-Morgan http://flickr.com/photos/aidanmorgan/2292579833 shared under a Creative Commons (BY) license">
+        <Slide bgImage={images.summary} bgDarken="0.7" copyright="flickr photo by Martin Stein https://flic.kr/p/8gjSqZ shared under a Creative Commons (BY) license">
           <Heading size={1} fit textColor="secondary">
             Re-Render completely
           </Heading>
@@ -748,7 +756,7 @@ export default class extends React.Component {
           </Heading>
         </Slide>
 
-        <Slide bgImage={images.fast} bgDarken="0.7" copyright="flickr photo by Manuel Mira Godinho https://flic.kr/p/539PAK shared under a Creative Commons (BY) license">
+        <Slide bgImage={images.summary} bgDarken="0.7" copyright="flickr photo by Martin Stein https://flic.kr/p/8gjSqZ shared under a Creative Commons (BY) license">
           <Heading size={1} fit textColor="secondary">
             Virtual DOM
           </Heading>
@@ -757,7 +765,7 @@ export default class extends React.Component {
           </Heading>
         </Slide>
 
-        <Slide bgImage={images.oneWay} bgDarken="0.8" copyright="flickr photo by Eric Magnuson https://flic.kr/p/65SvMR shared under a Creative Commons (BY) license">
+        <Slide bgImage={images.summary} bgDarken="0.7" copyright="flickr photo by Martin Stein https://flic.kr/p/8gjSqZ shared under a Creative Commons (BY) license">
           <Heading size={1} fit textColor="secondary">
             One way data flow
           </Heading>
@@ -766,7 +774,7 @@ export default class extends React.Component {
           </Heading>
         </Slide>
 
-        <Slide bgDarken="0.7" bgImage={images.magic}>
+        <Slide bgImage={images.summary} bgDarken="0.7" copyright="flickr photo by Martin Stein https://flic.kr/p/8gjSqZ shared under a Creative Commons (BY) license">
           <Heading size={1} fit textColor="tertiary">
             React has no magic
           </Heading>
@@ -783,7 +791,7 @@ export default class extends React.Component {
           </Heading>
           </Appear>
           <Appear>
-            <Heading size={2}>
+            <Heading size={2} textColor="quartary">
               to be continued...
             </Heading>
           </Appear>
