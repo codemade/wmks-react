@@ -269,11 +269,8 @@ export default class extends React.Component {
           </Heading>
         </Slide>
 
-        <Slide bgColor="#e74c3c" bgDarken="0.7" bgImage={images.superheroic} copyright="flickr photo by JD Hancock https://flic.kr/p/7E5DeZ shared under a Creative Commons (BY) license">
-          <Heading size={2} textColor="tertiary">
-            # MAGIC
-          </Heading>
-          <Image src={images.magic} width="800"/>
+        <Slide bgColor="#e74c3c" bgDarken="0.9" bgImage={images.superheroic} copyright="flickr photo by JD Hancock https://flic.kr/p/7E5DeZ shared under a Creative Commons (BY) license">
+          <Image src={images.magic} width="600"/>
         </Slide>
 
         <Slide bgColor="#27ae60" bgDarken="0.8" bgImage={images.view} copyright="flickr photo by Nicolas Alejandro https://flic.kr/p/ryQB3n shared under a Creative Commons (BY) license">
