@@ -6,7 +6,7 @@ var Minion = React.createClass({
 		var styles= {
 			background: 'url(presentation/img/minions/' + mood + '.png) no-repeat',
 			backgroundSize: '150px',
-			width: '150px',
+			width: '200px',
 			height: '200px',
 			position: 'relative',
 			textAlign: 'center'
@@ -19,7 +19,7 @@ var Minion = React.createClass({
 			position: 'absolute',
 			bottom: 0,
 			left: 0,
-			width: '150px',
+			width: '200px',
 			fontSize:'18px',
 			fontWeight: 'bold',
 			color: 'white'

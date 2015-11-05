@@ -2,7 +2,7 @@ import React from "react/addons";
 
 import {
   Appear, BlockQuote, Cite, CodePane, Deck, Fill,
-  Heading, Image, Layout, Link, ListItem, List, Quote, Slide, Text
+  Heading, Image, Layout, Link, ListItem, List, Quote, S, Slide, Text
 } from "../src/spectacle";
 
 import preloader from "../src/utils/preloader";
@@ -48,7 +48,8 @@ const styles = {
   avatar: { width: "200px", borderRadius: "100px", border: "6px double white" },
   iconTwitter: {width: "40px", verticalAlign: "middle", marginRight: "20px"},
   iconGithub: {width: "30px", verticalAlign: "middle"},
-  superheroic: {backgroundColor: "rgba(153,0,0,0.5)"}
+  superheroic: {backgroundColor: "rgba(153,0,0,0.5)"},
+  fullWidth: {width: "100%"}
 };
 
 preloader([
@@ -391,104 +392,155 @@ export default class extends React.Component {
         </Slide>
 
         <Slide transition={["fade"]} bgImage={images.oneWay} bgDarken="0.85" copyright="flickr photo by Eric Magnuson https://flic.kr/p/65SvMR shared under a Creative Commons (BY) license; http://www.iconarchive.com/tag/minion">
-          <Heading size={2} fit>
-            # data is passed via props
+          <Heading size={3} textFont="secondary" textColor="quartary">
+            Data Flow
           </Heading>
-          <br />
-          <Layout>
-            <Fill>
-              <Appear>
-                <Minion name="Bill" mood="hungry"/>
-              </Appear>
-            </Fill>
-            <Fill>
-              <Appear>
-                <CodePane
-                  lang="javascript"
-                  source={require("raw!./snippets/minionProps.example")}
-                  margin="20px auto"/>
-              </Appear>
-            </Fill>
-          </Layout>
+          <table style={ styles.fullWidth }>
+            <tr>
+              <td>
+                <Appear>
+                  <Minion name="Bill" mood="hungry"/>
+                </Appear>
+              </td>
+              <td>
+                <Appear>
+                  <CodePane
+                    lang="javascript"
+                    source={require("raw!./snippets/minionProps.example")}
+                    margin="20px auto"/>
+                </Appear>
+              </td>
+            </tr>
+          </table>
+          <Appear>
+            <Heading size={4} textColor="secondary">
+              # data is passed via props
+            </Heading>
+          </Appear>
         </Slide>
 
         <Slide bgImage={images.oneWay} bgDarken="0.85" copyright="flickr photo by Eric Magnuson https://flic.kr/p/65SvMR shared under a Creative Commons (BY) license; http://www.iconarchive.com/tag/minion">
-          <Heading size={2} fit>
-            # from parent to child
+          <Heading size={3} textFont="secondary" textColor="quartary">
+            Data Flow
           </Heading>
-          <br />
-          <Layout>
-            <Fill>
-              <Minion name="Bill" mood="hungry"/>
-            </Fill>
-            <Fill>
+          <table style={ styles.fullWidth }>
+            <tr>
+              <td>
+                <Minion name="Bill" mood="hungry"/>
+              </td>
+              <td>
                 <CodePane
                   lang="javascript"
                   source={require("raw!./snippets/minionPropChild.example")}
                   margin="20px auto"/>
-            </Fill>
-          </Layout>
+              </td>
+            </tr>
+          </table>
+          <Appear>
+            <Heading size={4} textColor="secondary">
+              # from parent to child
+            </Heading>
+          </Appear>
         </Slide>
 
         <Slide bgImage={images.oneWay} bgDarken="0.85" copyright="flickr photo by Eric Magnuson https://flic.kr/p/65SvMR shared under a Creative Commons (BY) license; http://www.iconarchive.com/tag/minion">
-          <Heading size={2} fit>
+          <Heading size={3} textFont="secondary" textColor="quartary">
+            Data Flow
+          </Heading>
+          <table style={ styles.fullWidth }>
+            <tr>
+              <td>
+                <Minion name="Bill" mood="hungry"/>
+              </td>
+              <td>
+                <CodePane
+                  lang="javascript"
+                  source={require("raw!./snippets/minionPropChild.example")}
+                  margin="20px auto"/>
+              </td>
+            </tr>
+          </table>
+          <Heading size={4} textColor="secondary">
             # props are immutable
           </Heading>
-          <br />
-          <Layout>
-            <Fill>
-              <Minion name="Bill" mood="hungry"/>
-            </Fill>
-            <Fill>
+        </Slide>
+
+        <Slide bgImage={images.oneWay} bgDarken="0.85" copyright="flickr photo by Eric Magnuson https://flic.kr/p/65SvMR shared under a Creative Commons (BY) license; http://www.iconarchive.com/tag/minion">
+          <Heading size={3} textFont="secondary" textColor="quartary">
+            Data Flow
+          </Heading>
+          <table style={ styles.fullWidth }>
+            <tr>
+              <td>
+                <Appear>
+                  <MinionMoodChanger />
+                </Appear>
+              </td>
+              <td>
+                <Appear>
+                  <CodePane
+                    lang="javascript"
+                    source={require("raw!./snippets/minionState.example")}
+                    margin="20px auto"/>
+                </Appear>
+              </td>
+            </tr>
+          </table>
+          <Appear>
+            <Text textColor="secondary">
+              <S type="bold">
+                # state is mutable
+              </S>
+            </Text>
+          </Appear>
+        </Slide>
+
+        <Slide bgImage={images.oneWay} bgDarken="0.85" copyright="flickr photo by Eric Magnuson https://flic.kr/p/65SvMR shared under a Creative Commons (BY) license; http://www.iconarchive.com/tag/minion">
+          <Heading size={3} textFont="secondary" textColor="quartary">
+            Data Flow
+          </Heading>
+          <table style={ styles.fullWidth }>
+            <tr>
+              <td>
+                <MinionMoodChanger />
+              </td>
+              <td>
                 <CodePane
                   lang="javascript"
-                  source={require("raw!./snippets/minionPropChild.example")}
+                  source={require("raw!./snippets/minionState.example")}
                   margin="20px auto"/>
-            </Fill>
-          </Layout>
+              </td>
+            </tr>
+          </table>
+          <Text textColor="secondary">
+            <S type="bold">
+              # setState will make your component re-render
+            </S>
+          </Text>
         </Slide>
 
         <Slide bgImage={images.oneWay} bgDarken="0.85" copyright="flickr photo by Eric Magnuson https://flic.kr/p/65SvMR shared under a Creative Commons (BY) license; http://www.iconarchive.com/tag/minion">
-          <Heading size={2} fit>
-            # state is mutable
+          <Heading size={3} textFont="secondary" textColor="quartary">
+            Data Flow
           </Heading>
-          <br />
-          <Appear>
-            <CodePane
-              lang="javascript"
-              source={require("raw!./snippets/minionState.example")}
-              margin="20px auto"/>
-          </Appear>
-          <br />
-          <Appear>
-            <MinionMoodChanger />
-          </Appear>
-        </Slide>
-
-        <Slide bgImage={images.oneWay} bgDarken="0.85" copyright="flickr photo by Eric Magnuson https://flic.kr/p/65SvMR shared under a Creative Commons (BY) license; http://www.iconarchive.com/tag/minion">
-          <Heading size={2} fit>
-          # setState will make your component re-render
-          </Heading>
-          <br />
-          <CodePane
-            lang="javascript"
-            source={require("raw!./snippets/minionState.example")}
-            margin="20px auto"/>
-          <br />
-          <MinionMoodChanger />
-        </Slide>
-
-        <Slide bgImage={images.oneWay} bgDarken="0.85" copyright="flickr photo by Eric Magnuson https://flic.kr/p/65SvMR shared under a Creative Commons (BY) license; http://www.iconarchive.com/tag/minion">
-          <Heading size={2} fit>
-            # state is passed from parent to child via props
-          </Heading>
-          <br />
-          <CodePane
-            lang="javascript"
-            source={require("raw!./snippets/minionState.example")}
-            margin="20px auto"/>
-          <br />
-          <MinionMoodChanger />
+          <table style={ styles.fullWidth }>
+            <tr>
+              <td>
+                <MinionMoodChanger />
+              </td>
+              <td>
+                <CodePane
+                  lang="javascript"
+                  source={require("raw!./snippets/minionState.example")}
+                  margin="20px auto"/>
+              </td>
+            </tr>
+          </table>
+          <Text textColor="secondary">
+            <S type="bold">
+              # state is passed from parent to child via props
+            </S>
+          </Text>
         </Slide>
 
         <Slide transition={["slide"]} bgImage={images.painting} bgDarken="0.7" copyright="flickr photo by John-Morgan http://flickr.com/photos/aidanmorgan/2292579833 shared under a Creative Commons (BY) license">
