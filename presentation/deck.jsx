@@ -390,7 +390,7 @@ export default class extends React.Component {
           </Appear>
         </Slide>
 
-        <Slide transition={["fade"]} bgImage={images.oneWay} bgDarken="0.85" copyright="flickr photo by Eric Magnuson https://flic.kr/p/65SvMR shared under a Creative Commons (BY) license; http://www.iconarchive.com/tag/minion">
+        <Slide transition={["fade"]} bgImage={images.oneWay} bgDarken="0.9" copyright="flickr photo by Eric Magnuson https://flic.kr/p/65SvMR shared under a Creative Commons (BY) license; http://www.iconarchive.com/tag/minion">
           <Heading size={3} textFont="secondary" textColor="quartary">
             Data Flow
           </Heading>
@@ -418,7 +418,7 @@ export default class extends React.Component {
           </Appear>
         </Slide>
 
-        <Slide bgImage={images.oneWay} bgDarken="0.85" copyright="flickr photo by Eric Magnuson https://flic.kr/p/65SvMR shared under a Creative Commons (BY) license; http://www.iconarchive.com/tag/minion">
+        <Slide bgImage={images.oneWay} bgDarken="0.9" copyright="flickr photo by Eric Magnuson https://flic.kr/p/65SvMR shared under a Creative Commons (BY) license; http://www.iconarchive.com/tag/minion">
           <Heading size={3} textFont="secondary" textColor="quartary">
             Data Flow
           </Heading>
@@ -442,7 +442,7 @@ export default class extends React.Component {
           </Appear>
         </Slide>
 
-        <Slide bgImage={images.oneWay} bgDarken="0.85" copyright="flickr photo by Eric Magnuson https://flic.kr/p/65SvMR shared under a Creative Commons (BY) license; http://www.iconarchive.com/tag/minion">
+        <Slide bgImage={images.oneWay} bgDarken="0.9" copyright="flickr photo by Eric Magnuson https://flic.kr/p/65SvMR shared under a Creative Commons (BY) license; http://www.iconarchive.com/tag/minion">
           <Heading size={3} textFont="secondary" textColor="quartary">
             Data Flow
           </Heading>
@@ -464,7 +464,7 @@ export default class extends React.Component {
           </Heading>
         </Slide>
 
-        <Slide bgImage={images.oneWay} bgDarken="0.85" copyright="flickr photo by Eric Magnuson https://flic.kr/p/65SvMR shared under a Creative Commons (BY) license; http://www.iconarchive.com/tag/minion">
+        <Slide bgImage={images.oneWay} bgDarken="0.9" copyright="flickr photo by Eric Magnuson https://flic.kr/p/65SvMR shared under a Creative Commons (BY) license; http://www.iconarchive.com/tag/minion">
           <Heading size={3} textFont="secondary" textColor="quartary">
             Data Flow
           </Heading>
@@ -494,7 +494,7 @@ export default class extends React.Component {
           </Appear>
         </Slide>
 
-        <Slide bgImage={images.oneWay} bgDarken="0.85" copyright="flickr photo by Eric Magnuson https://flic.kr/p/65SvMR shared under a Creative Commons (BY) license; http://www.iconarchive.com/tag/minion">
+        <Slide bgImage={images.oneWay} bgDarken="0.9" copyright="flickr photo by Eric Magnuson https://flic.kr/p/65SvMR shared under a Creative Commons (BY) license; http://www.iconarchive.com/tag/minion">
           <Heading size={3} textFont="secondary" textColor="quartary">
             Data Flow
           </Heading>
@@ -518,7 +518,7 @@ export default class extends React.Component {
           </Text>
         </Slide>
 
-        <Slide bgImage={images.oneWay} bgDarken="0.85" copyright="flickr photo by Eric Magnuson https://flic.kr/p/65SvMR shared under a Creative Commons (BY) license; http://www.iconarchive.com/tag/minion">
+        <Slide bgImage={images.oneWay} bgDarken="0.9" copyright="flickr photo by Eric Magnuson https://flic.kr/p/65SvMR shared under a Creative Commons (BY) license; http://www.iconarchive.com/tag/minion">
           <Heading size={3} textFont="secondary" textColor="quartary">
             Data Flow
           </Heading>
