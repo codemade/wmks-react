@@ -297,9 +297,9 @@ export default class extends React.Component {
             source={require("raw!./snippets/simple-component.example")}
             margin="20px auto"/>
           <Appear>
-            <Heading size={2}>
+            <Text textColor="secondary">
               Just JavaScript
-            </Heading>
+            </Text>
           </Appear>
         </Slide>
 
@@ -313,11 +313,9 @@ export default class extends React.Component {
             source={require("raw!./snippets/simple-component-jsx.example")}
             margin="20px auto"/>
 
-          <Appear>
-            <Heading size={2} fit>
-              JSX makes it more readable.
-            </Heading>
-          </Appear>
+          <Text textColor="secondary">
+            JSX makes it more readable.
+          </Text>
         </Slide>
 
         <Slide transition={["slide"]}>
