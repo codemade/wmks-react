@@ -145,7 +145,9 @@ export default class extends React.Component {
           <Appear>
             <BlockQuote>
               <Quote>
-                A JS library for creating UIs
+                A JavaScript library
+                <br />
+                for creating UIs
               </Quote>
             </BlockQuote>
           </Appear>
@@ -385,7 +387,7 @@ export default class extends React.Component {
             Data Flow
           </Heading>
           <Appear>
-            <Heading fit size={1} textColor="secondary">
+            <Heading size={1} textColor="secondary">
               - One Way -
             </Heading>
           </Appear>
