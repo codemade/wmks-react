@@ -292,12 +292,10 @@ export default class extends React.Component {
             How does a component look like ?
           </Heading>
           <br />
-          <Appear>
-            <CodePane
-              lang="javascript"
-              source={require("raw!./snippets/simple-component.example")}
-              margin="20px auto"/>
-          </Appear>
+          <CodePane
+            lang="javascript"
+            source={require("raw!./snippets/simple-component.example")}
+            margin="20px auto"/>
           <Appear>
             <Heading size={2}>
               Just JavaScript
@@ -718,14 +716,14 @@ export default class extends React.Component {
           </Appear>
           <Appear>
             <Heading size={1} fit textColor="tertiary">
-              but JS ist fast!
+              but JS is fast!
             </Heading>
           </Appear>
         </Slide>
 
         <Slide bgImage={images.summary} bgDarken="0.7" copyright="flickr photo by Martin Stein https://flic.kr/p/8gjSqZ shared under a Creative Commons (BY) license">
           <Heading size={1} fit textFont="secondary" textColor="quartary">
-            To sum it up...
+            to sum it up...
           </Heading>
         </Slide>
 
