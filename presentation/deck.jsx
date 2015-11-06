@@ -477,12 +477,12 @@ export default class extends React.Component {
           <table style={ styles.fullWidth }>
             <tr>
               <td>
-                <Appear>
+                <Appear fid="1">
                   <MinionMoodChanger />
                 </Appear>
               </td>
               <td>
-                <Appear>
+                <Appear fid="2">
                   <CodePane
                     lang="javascript"
                     source={require("raw!./snippets/minionState.example")}
@@ -491,7 +491,7 @@ export default class extends React.Component {
               </td>
             </tr>
           </table>
-          <Appear>
+          <Appear fid="2">
             <Text textColor="secondary">
               <S type="bold">
                 # state is mutable
@@ -818,16 +818,19 @@ export default class extends React.Component {
           </Heading>
         </Slide>
 
-        <Slide bgImage={images.summary} bgDarken="0.7" copyright="flickr photo by Martin Stein https://flic.kr/p/8gjSqZ shared under a Creative Commons (BY) license">
-          <Heading size={1} fit textColor="tertiary">
-            React has no magic
+        <Slide bgImage={images.magic} bgDarken="0.7" copyright="flickr photo by Martin Stein https://flic.kr/p/8gjSqZ shared under a Creative Commons (BY) license">
+          <Heading size={1} textColor="tertiary">
+            NO
           </Heading>
+          <Image src={images.magic} width="500"/>
         </Slide>
 
         <Slide bgImage={images.applause} bgDarken="0.5">
-          <Heading size={1} fit textColor="secondary">
-            YaY!<br />We can render components.
-          </Heading>
+          <Appear>
+            <Heading size={1} fit textColor="secondary">
+              YaY!<br />We can render components.
+            </Heading>
+          </Appear>
           <br />
           <Appear>
           <Heading size={1} fit>
