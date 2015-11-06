@@ -91,12 +91,18 @@ export default class extends React.Component {
   render() {
     return (
       <Deck transitionDuration={800}>
-        <Slide transition={["slide"]}>
+        <Slide transition={["slide"]} copyright="Powered by Spectacle, the ReactJS based presentation library (https://github.com/FormidableLabs/spectacle)">
           <Heading textSize="12em" lineHeight={0.1} textColor="tertiary" textFont="secondary">
             React JS
           </Heading>
+          <br />
+          <Heading textSize="2em">
+            <a href="https://facebook.github.io/react/" target="_blank" className="facebook_link">
+              - a JavaScript library for building UIs by facebook -
+            </a>
+          </Heading>
           <Image src={images.react} height="300px"/>
-          <Text bold caps textColor="secondary">
+          <Text bold caps textColor="tertiary">
             Webmontag Kassel, 09. November 2015
           </Text>
         </Slide>
