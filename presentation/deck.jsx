@@ -485,7 +485,7 @@ export default class extends React.Component {
                 <Appear fid="2">
                   <CodePane
                     lang="javascript"
-                    source={require("raw!./snippets/minionState.example")}
+                    source={require("raw!./snippets/minionState-1.example")}
                     margin="20px auto"/>
                 </Appear>
               </td>
@@ -512,16 +512,18 @@ export default class extends React.Component {
               <td>
                 <CodePane
                   lang="javascript"
-                  source={require("raw!./snippets/minionState.example")}
+                  source={require("raw!./snippets/minionState-2.example")}
                   margin="20px auto"/>
               </td>
             </tr>
           </table>
-          <Text textColor="secondary">
-            <S type="bold">
-              # setState will make your component re-render
-            </S>
-          </Text>
+          <Appear>
+            <Text textColor="secondary">
+              <S type="bold">
+                # setState will make your component re-render
+              </S>
+            </Text>
+          </Appear>
         </Slide>
 
         <Slide bgImage={images.oneWay} bgDarken="0.9" copyright="flickr photo by Eric Magnuson https://flic.kr/p/65SvMR shared under a Creative Commons (BY) license; http://www.iconarchive.com/tag/minion">
@@ -536,16 +538,18 @@ export default class extends React.Component {
               <td>
                 <CodePane
                   lang="javascript"
-                  source={require("raw!./snippets/minionState.example")}
+                  source={require("raw!./snippets/minionState-3.example")}
                   margin="20px auto"/>
               </td>
             </tr>
           </table>
-          <Text textColor="secondary">
-            <S type="bold">
-              # state is passed from parent to child via props
-            </S>
-          </Text>
+          <Appear>
+            <Text textColor="secondary">
+              <S type="bold">
+                # state is passed from parent to child via props
+              </S>
+            </Text>
+          </Appear>
         </Slide>
 
         <Slide transition={["slide"]} bgImage={images.painting} bgDarken="0.7" copyright="flickr photo by John-Morgan http://flickr.com/photos/aidanmorgan/2292579833 shared under a Creative Commons (BY) license">
