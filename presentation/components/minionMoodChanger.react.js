@@ -19,12 +19,20 @@ var MinionMoodChanger = React.createClass({
 	render() {
 		let moods = this.getMoodOptions();
 		let styles = {
-			width: '300px',
-			margin: '0 auto'
+			width: '200px',
+			margin: '0 auto',
+			textAlign: 'center'
 		};
-		return <div style={styles}> 
+		let selectStyle = {
+			border: '1px solid blue',
+			color: 'black',
+			width: '200px'
+		};
+		return <div style={styles}>
+			<select style={selectStyle} onChange={this.onMoodChanged}>{moods}</select>
+			<br />
+			<br />
 			<Minion name="Bill" mood={this.state.currentMood} />
-			<select onChange={this.onMoodChanged}>{moods}</select>
 		</div>;
 	}
 });

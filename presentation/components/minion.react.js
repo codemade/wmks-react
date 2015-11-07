@@ -6,10 +6,11 @@ var Minion = React.createClass({
 		var styles= {
 			background: 'url(presentation/img/minions/' + mood + '.png) no-repeat',
 			backgroundSize: '150px',
-			width: '150px',
+			width: '200px',
 			height: '200px',
-			position: 'relative'
-		};		
+			position: 'relative',
+			textAlign: 'center'
+		};
 		return styles;
 	},
 	render() {
@@ -18,14 +19,15 @@ var Minion = React.createClass({
 			position: 'absolute',
 			bottom: 0,
 			left: 0,
-			fontSize:'22px',
+			width: '200px',
+			fontSize:'18px',
 			fontWeight: 'bold',
 			color: 'white'
 		};
 
-		return <div> 
+		return <div>
 			<div style={styles}>
-				<div style={textStyles}>Hy i'm {this.props.name} and i'm {this.props.mood}!</div>
+				<div style={textStyles}>Hey I'm {this.props.name}<br />and I am {this.props.mood}!</div>
 			</div>
 		</div>;
 	}

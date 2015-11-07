@@ -1,0 +1,14 @@
+var MinionMoodChanger = React.createClass({
+  render: function() {
+    return <div>
+        <select onChange={this.onMoodChanged}>
+          {...getOptions...}
+        </select>
+        <Minion name="Bill" mood={this.state.currentMood}/>
+      </div>;
+  },
+  onMoodChanged(event) {
+    let newMood = event.target.value;
+    this.setState({currentMood: newMood});
+  }
+});
