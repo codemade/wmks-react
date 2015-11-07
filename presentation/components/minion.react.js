@@ -4,7 +4,7 @@ const React = require("react");
 var Minion = React.createClass({
 	getStyles(mood) {
 		var styles= {
-			background: 'url(presentation/img/minions/' + mood + '.png) no-repeat',
+			background: 'url(minions/' + mood + '.png) no-repeat',
 			backgroundSize: '150px',
 			width: '200px',
 			height: '200px',
