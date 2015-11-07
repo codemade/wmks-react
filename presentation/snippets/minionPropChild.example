@@ -1,9 +1,0 @@
-var Minion = React.createClass({
-  render: function() {
-    return (
-      <div>
-    	  Hey I'm {this.props.name}
-    	  and I am {this.props.mood}!
-      </div>);
-  }
-});
